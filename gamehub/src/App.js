@@ -21,10 +21,11 @@ function App() {
   }, [])
 
   return (
-   <div>
+   /*<div>
     <h1>Gamehub</h1>
     <GameCard game={game}/>
-   </div>
+   </div>*/
+   <></>
   );
 }
 
