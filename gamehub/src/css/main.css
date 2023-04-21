@@ -3,4 +3,15 @@ body {
   color: white;
 }
 
+.navbar {
+  border-style: solid;
+  border-radius: 25px;
+  border-color: red;
+  color: white;
+}
+
+.Links {
+  list-style: none;
+}
+
 /*# sourceMappingURL=main.css.map */
