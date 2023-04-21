@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 
 function GameList({ game }) {
     return (
@@ -15,3 +15,4 @@ function GameList({ game }) {
   }
 
   export default GameList;
+  */
