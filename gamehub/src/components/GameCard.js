@@ -1,18 +1,14 @@
-/*import React from "react";
+import React from "react";
 
-function GameList({ game }) {
+// Component som viser et spillkort
+function GameCard() {
     return (
-        
-    <ul className="games">
-       {game.map((games) => (
-        <li key={games.title}>
-        <h3>{games.title}</h3>
-        </li>
-       ))}
-     </ul>
+        <div className="gamelist">
+
+        </div>
      );
         
   }
 
-  export default GameList;
-  */
+  export default GameCard;
+  
