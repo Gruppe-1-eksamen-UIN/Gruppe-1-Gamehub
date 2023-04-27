@@ -1,12 +1,12 @@
-/*import React from "react";
+import React from "react";
 
-function GameList({ game }) {
+function GameCard({ game }) {
     return (
         
     <ul className="games">
        {game.map((games) => (
-        <li key={games.title}>
-        <h3>{games.title}</h3>
+        <li key={games.id}>
+        <h3>{games.name}</h3>
         </li>
        ))}
      </ul>
@@ -14,5 +14,5 @@ function GameList({ game }) {
         
   }
 
-  export default GameList;
-  */
+  export default GameCard;
+  
