@@ -1,12 +1,12 @@
 import React from "react";
 
-function GameCard({ game }) {
+function GameList({ game }) {
     return (
         
     <ul className="games">
        {game.map((games) => (
-        <li key={games.id}>
-        <h3>{games.name}</h3>
+        <li key={games.title}>
+        <h3>{games.title}</h3>
         </li>
        ))}
      </ul>

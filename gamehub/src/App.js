@@ -2,7 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from "react"
 import axios from 'axios'
-import GameCard from "./components/GameCard"
+import GameShop from './components/GameShop';
+import MyGames from './components/MyGames';
+import Favourites from './components/Favourites';
 
 function App() {
   const [game, setGame] = useState([]);
@@ -21,11 +23,17 @@ function App() {
   }, [])
 
   return (
-  /* <div>
-    <h1>Gamehub</h1>
-    <GameCard game={game}/>
-   </div>*/
-   <></>
+
+  
+   
+   <div>
+    <h1>Group 1-Gamehub</h1>
+    <GameShop/>
+    <MyGames/>
+    <Favourites/>
+   </div>
+   
+
   );
 }
 
