@@ -6,6 +6,7 @@ import GameShop from './components/GameShop';
 import MyGames from './components/MyGames';
 import Favourites from './components/Favourites';
 import Dashboard from './components/Dashboard';
+import Navbar from './components/Navbar';
 
 function App() {
   const [game, setGame] = useState([]);
