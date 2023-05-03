@@ -1,11 +1,15 @@
 import React from "react";
 
-// Component som viser et spillkort
-function GameCard() {
+function GameList({ game }) {
     return (
-        <div className="gamelist">
-
-        </div>
+        
+    <ul className="games">
+       {game.map((games) => (
+        <li key={games.title}>
+        <h3>{games.title}</h3>
+        </li>
+       ))}
+     </ul>
      );
         
   }

@@ -24,6 +24,9 @@ function App() {
   }, [])
 
   return (
+
+  
+   
    <div>
     <h1>Group 1-Gamehub</h1>
     <Dashboard/>
@@ -32,6 +35,7 @@ function App() {
     <Favourites/> */}
    </div>
    
+
   );
 }
 
