@@ -5,6 +5,7 @@ import axios from 'axios'
 import GameShop from './components/GameShop';
 import MyGames from './components/MyGames';
 import Favourites from './components/Favourites';
+import Dashboard from './components/Dashboard';
 
 function App() {
   const [game, setGame] = useState([]);
@@ -28,9 +29,10 @@ function App() {
    
    <div>
     <h1>Group 1-Gamehub</h1>
-    <GameShop/>
+    <Dashboard/>
+    {/* <GameShop/>
     <MyGames/>
-    <Favourites/>
+    <Favourites/> */}
    </div>
    
 
