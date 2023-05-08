@@ -6,9 +6,9 @@ import MyGames from "./MyGames";
 export default function Dashboard(){
     return(
         <>
-        <MyGames/>
-        <Favourites/>
-        <GameShop/>
+       <button className="button"><MyGames/></button> 
+       <button className="button"><Favourites/></button> 
+       <button className="button"><GameShop/></button> 
         </>
     )
 }

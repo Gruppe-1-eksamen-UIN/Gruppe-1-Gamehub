@@ -2,10 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from "react"
 import axios from 'axios'
-import GameShop from './components/GameShop';
-import MyGames from './components/MyGames';
-import Favourites from './components/Favourites';
 import Dashboard from './components/Dashboard';
+import './css/main.css'
 
 function App() {
   const [game, setGame] = useState([]);
@@ -27,12 +25,10 @@ function App() {
 
   
    
-   <div>
+   <div className='nav'>
     <h1>Group 1-Gamehub</h1>
     <Dashboard/>
-    {/* <GameShop/>
-    <MyGames/>
-    <Favourites/> */}
+    
    </div>
    
 

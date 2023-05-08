@@ -1,0 +1,15 @@
+$color_1: #fff;
+$color_2: #000000;
+
+
+
+body{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    background-color: #000000;
+}
+
+nav{
+    background-color: $color_2;
+}

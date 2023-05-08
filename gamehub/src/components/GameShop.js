@@ -2,7 +2,7 @@
 export default function GameShop(){
     return(
         <div className="gameshop">
-            <h1>GAMESHOP</h1>
+            <h3>Gameshop</h3>
 
         </div>
     )
