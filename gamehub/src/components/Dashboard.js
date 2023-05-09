@@ -7,13 +7,11 @@ import SanityGames from "./SanityGames"
 export default function Dashboard(){
     return(
         <>
-        <nav>
+        <div className="buttons">
        <button className="button"><MyGames/></button> 
        <button className="button"><Favourites/></button> 
-       <button className="button"><GameShop/></button> 
-        </nav>
-        <SanityGames/>
-   
+       <button className="button"><GameShop/></button>
+       </div> 
         </>
         
         

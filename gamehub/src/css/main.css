@@ -22,21 +22,21 @@ body {
 }
 
 body{
-  
+    max-width: 1200rem;
     
     
 }
 
-.nav{
+.nav {
     display: flex;
-    max-width: 1200px;
-    width: 100%;
+    justify-content: space-between;
     align-items: center;
     color: white;
     background-color: black;
+    padding: 1rem;
 }
 
-.button{
-    height: 55px;
-    
+.buttons {
+    display: flex;
+    justify-content: space-between;
 }
