@@ -3,6 +3,7 @@ import './css/main.css'
 import axios from 'axios'
 import Dashboard from './components/Dashboard';
 import './css/main.css'
+import { useState, useEffect } from 'react';
 
 function App() {
   const [game, setGame] = useState([]);
