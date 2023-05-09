@@ -13,3 +13,8 @@ body{
 nav{
     background-color: $color_2;
 }
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}

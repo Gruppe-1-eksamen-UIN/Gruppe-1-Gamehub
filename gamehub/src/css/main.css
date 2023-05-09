@@ -1,42 +1,17 @@
 body {
-  background-color: #1b2838;
-  color: white;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  background-color: #000000;
 }
 
-/*# sourceMappingURL=main.css.map */
-
-
-
-.nav{
-    display: flex;
-    max-width: 1200px;
-    width: 100%;
-    align-items: center;
-    color: white;
-    background-color: black;
-}
-
-.button{
-    height: 55px;
-    
-}
-
-body{
-    max-width: 1200rem;
-    
-    
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    background-color: black;
-    padding: 1rem;
+nav {
+  background-color: #000000;
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
+
+/*# sourceMappingURL=main.css.map */
