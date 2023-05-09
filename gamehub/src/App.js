@@ -4,6 +4,7 @@ import axios from 'axios'
 import Dashboard from './components/Dashboard';
 import './css/main.css'
 import { useState, useEffect } from 'react';
+import SanityGames from './components/SanityGames';
 
 
 function App() {
@@ -23,13 +24,17 @@ function App() {
   }, [])
 
   return (
+    <>
    <div className='nav'>
     <h1>Gamehub</h1>
     
     <Dashboard/>
     
    </div>
-   
+   <div>
+    <SanityGames />
+   </div>
+   </>
   );
 }
 
