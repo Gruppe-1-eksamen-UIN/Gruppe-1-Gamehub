@@ -26,7 +26,8 @@ function App() {
   
    
    <div className='nav'>
-    <h1>Group 1-Gamehub</h1>
+    <h1>Gamehub</h1>
+    
     <Dashboard/>
     
    </div>
