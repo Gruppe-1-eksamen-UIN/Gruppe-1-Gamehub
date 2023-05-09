@@ -1,18 +1,16 @@
 import React from "react";
 
-function GameList({ game }) {
-    return (
-        
-    <ul className="games">
-       {game.map((games) => (
-        <li key={games.title}>
-        <h3>{games.title}</h3>
-        </li>
-       ))}
-     </ul>
-     );
-        
-  }
+function GameCard({ games }) {
+  return (
+    <div>
+      <h1>List of Games</h1>
+      <ul>
+        {games.map((game) => (
+          <li key={game.id}>{game.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
-  export default GameCard;
-  
+export default GameCard;
