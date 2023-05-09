@@ -13,6 +13,11 @@ export default function Dashboard(){
        <button className="button"><Favourites/></button> 
        <button className="button"><GameShop/></button> 
        </div>
+
+       <section>
+        <GameShop/>
+       </section>
+
         </>
         
         
