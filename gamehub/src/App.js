@@ -1,11 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
-import { useEffect, useState } from "react"
+import './css/main.css'
 import axios from 'axios'
 import Dashboard from './components/Dashboard';
 import './css/main.css'
-
-
 
 function App() {
   const [game, setGame] = useState([]);
@@ -20,16 +17,17 @@ function App() {
   }, []);
 
   return (
-    <div className='nav'>
+
+  
+   
+   <div className='nav'>
     <h1>Group 1-Gamehub</h1>
     <Dashboard/>
     
    </div>
+   
+
   );
 }
 
 export default App;
-
-
-
-

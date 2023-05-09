@@ -8,12 +8,12 @@ import MyGames from "./MyGames";
 export default function Dashboard(){
     return(
         <>
-        <nav>
-        <button className="button"><MyGames/></button> 
+       <button className="button"><MyGames/></button> 
        <button className="button"><Favourites/></button> 
        <button className="button"><GameShop/></button> 
-        </nav>
-        <GameCard/>
         </>
+        
+        
+
     )
 }

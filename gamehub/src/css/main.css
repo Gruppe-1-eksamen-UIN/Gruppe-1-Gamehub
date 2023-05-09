@@ -1,9 +1,11 @@
-
-body{
-  
-    
-    
+body {
+  background-color: #1b2838;
+  color: white;
 }
+
+/*# sourceMappingURL=main.css.map */
+
+
 
 .nav{
     display: flex;
@@ -17,4 +19,24 @@ body{
 .button{
     height: 55px;
     
+}
+
+body{
+    max-width: 1200rem;
+    
+    
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: black;
+    padding: 1rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
 }
