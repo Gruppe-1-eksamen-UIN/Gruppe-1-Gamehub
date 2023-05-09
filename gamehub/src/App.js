@@ -27,7 +27,7 @@ function App() {
     <Dashboard/>
    </div>
   
-  <div>
+  <div className='sanityGames'>
     <SanityGames/>
   </div>
    
