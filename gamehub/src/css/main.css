@@ -4,3 +4,39 @@ body {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+
+
+.nav{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    color: white;
+    background-color: black;
+}
+
+.button{
+    height: 55px;
+    
+}
+
+body{
+  
+    
+    
+}
+
+.nav{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    color: white;
+    background-color: black;
+}
+
+.button{
+    height: 55px;
+    
+}
