@@ -4,6 +4,7 @@ import GameShop from './components/GameShop';
 import './css/main.css'
 import Dashboard from './components/Dashboard';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import GameCard from './components/GameCard';
 
 function App() {
   const [games, setGames] = useState([]);
@@ -21,13 +22,13 @@ function App() {
   return (
     <Router>
       <div>
+        <h1>Gamehub</h1>
         <Routes>
-         <Route path="/" exact>
-            <Dashboard/>
-          </Route>
-          <Route path="/gameshop">
-            <GameShop games={games}/>
-          </Route>
+         <Route path="/" element={<Dashboard/>}/>
+        </Routes>
+
+        <Routes>
+          <Route path="/" element={<GameCard games={games}/>}/>
         </Routes>
           
       </div>
