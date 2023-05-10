@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Navbar from "./Navbar";
 
 export default function MyGames() {
   const [myGames, setMyGames] = useState([]);
@@ -14,7 +15,9 @@ export default function MyGames() {
       });
   }, []);
 
+  
   return (
+    
     <div className="mygames">
       <h1>My Games-Library</h1>
       <div className="game-list">

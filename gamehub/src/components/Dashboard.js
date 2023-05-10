@@ -31,10 +31,10 @@ useEffect(() => {
 
     return(
         <>
-        <h1 className="Title">Not-Steam</h1>
+        {/* <h1 className="Title">Not-Steam</h1> */}
         <div className="dashboard">
-            <Navbar/>
-        <GameShop newGames={newGames}/>
+            <Navbar/>  
+        <GameShop numGames={10} newGames={newGames}/>
         <MyGames myGames={myGames} />
         <Favourites/>
         </div>

@@ -29,7 +29,7 @@ function App() {
         "https://api.rawg.io/api/games?key=5d8741db23a14d7f88a2c6ccd843ee6c&ordering=-released"
       )
       .then((response) => {
-        setNewGames(response.data.results.slice(0, 3));
+        setNewGames(response.data.results.slice(0, 10));
       });
   }, []);
 
@@ -39,26 +39,29 @@ function App() {
         "https://api.rawg.io/api/games?key=5d8741db23a14d7f88a2c6ccd843ee6c&genres=action"
       )
       .then((response) => {
-        setMyGames(response.data.results.slice(0, 3));
+        setMyGames(response.data.results.slice(0, 10));
       });
   }, []);
 
   return (
+    
     <Router>
-      <div>
-        <Navbar />
+      <div >
+      <h1 className="Title">Not-Steam</h1>
+        <Navbar/>
         <Routes>
-          <Route path="/gameshop">
-            <GameShop newGames={newGames} />
+          
+          <Route path="/gameshop" element={<GameShop numGames={10}/>}>
+            {/* <GameShop newGames={newGames} /> */}
           </Route>
-          <Route path="/mygames">
-            <MyGames myGames={myGames} />
+          <Route path="/mygames" element={ <MyGames myGames={myGames}/>}>
+            {/* // <MyGames myGames={myGames} /> */}
           </Route>
-          <Route path="/favourites">
-            <Favourites />
+          <Route path="/favourites" element={<Favourites />}>
+            
           </Route>
-          <Route path="/">
-            <Dashboard games={game} />
+          <Route path="/" element={<Dashboard games={game} />}>
+            {/* <Dashboard games={game} /> */}
           </Route>
         </Routes>
       </div>
