@@ -23,25 +23,26 @@ function App() {
       });
   };
 
-  useEffect(() => {
-    axios
-      .get(
-        "https://api.rawg.io/api/games?key=5d8741db23a14d7f88a2c6ccd843ee6c&ordering=-released"
-      )
-      .then((response) => {
-        setNewGames(response.data.results.slice(0, 10));
-      });
-  }, []);
+    // useEffect(() => {
+    //   axios
+    //     .get(
+    //       "https://api.rawg.io/api/games?key=5d8741db23a14d7f88a2c6ccd843ee6c&ordering=-released"
+    //     )
+    //     .then((response) => {
+    //       setNewGames(response.data.results.slice(0, 10));
+    //     });
+    // }, []);
+  
 
-  useEffect(() => {
-    axios
-      .get(
-        "https://api.rawg.io/api/games?key=5d8741db23a14d7f88a2c6ccd843ee6c&genres=action"
-      )
-      .then((response) => {
-        setMyGames(response.data.results.slice(0, 10));
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       "https://api.rawg.io/api/games?key=5d8741db23a14d7f88a2c6ccd843ee6c&genres=action"
+  //     )
+  //     .then((response) => {
+  //       setMyGames(response.data.results.slice(0, 10));
+  //     });
+  // }, []);
 
   return (
     
