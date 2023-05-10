@@ -10,7 +10,7 @@ export default function Dashboard(){
     const [games, setGames] = useState([]);
     
     useEffect(() => {
-        axios.get('https://api.rawg.io/api/games?genres=adventure&page_size=20&key=5d8741db23a14d7f88a2c6ccd843ee6c')
+        axios.get('https://api.rawg.io/api/games?dates=2023-05-01,2023-05-19&ordering=-released&page_size=3&key=5d8741db23a14d7f88a2c6ccd843ee6c')
           .then((response) => {
             setGames(response.data.results);
           })
@@ -18,6 +18,8 @@ export default function Dashboard(){
             console.log(error);
           });
       }, []);
+
+    
 
     return (
         <>
@@ -28,7 +30,7 @@ export default function Dashboard(){
        <button className="button"><GameShop/></button> 
         </div>
 
-        <div className="my-games">
+        <div className="tre-nye">
             <GameCard games={games} />
         </div>
        
