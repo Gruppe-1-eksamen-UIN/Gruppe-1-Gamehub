@@ -2,6 +2,8 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import GameShop from './components/GameShop';
 import './css/main.css'
+import Dashboard from './components/Dashboard';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   const [games, setGames] = useState([]);
@@ -17,9 +19,19 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <GameShop games={games} />
-    </div>
+    <Router>
+      <div>
+        <Routes>
+         <Route path="/" exact>
+            <Dashboard/>
+          </Route>
+          <Route path="/gameshop">
+            <GameShop games={games}/>
+          </Route>
+        </Routes>
+          
+      </div>
+    </Router>
   );
 }
 
