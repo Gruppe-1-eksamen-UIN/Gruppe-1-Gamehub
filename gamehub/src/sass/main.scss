@@ -5,6 +5,14 @@ body {
   
 //   /# sourceMappingURL=main.css.map/
 
+.grid{
+   
+    border: 3px solid grey;
+    margin-bottom: 10px;
+}
+
+
+
 .nav {
       display: flex;
       justify-content: space-between;
@@ -14,6 +22,7 @@ body {
       padding: 1rem;
 }
 
+
 .buttons {
     justify-content: space-between;
 }
@@ -22,4 +31,10 @@ body {
     display: flex;
     justify-content: center;
     
+}
+.bilde{
+    width: 35%;
+}
+.navn{
+    list-style: none;
 }
