@@ -8,13 +8,15 @@ import MyGames from "./MyGames";
 export default function Dashboard(){
     return(
         <>
-        <div className="buttons">
+        <div className="nav">
+        <h1>Gamehub</h1>
        <button className="button"><MyGames/></button> 
        <button className="button"><Favourites/></button> 
        <button className="button"><GameShop/></button> 
-       </div>
-
+        </div>
+       
         </>
+       
         
         
 

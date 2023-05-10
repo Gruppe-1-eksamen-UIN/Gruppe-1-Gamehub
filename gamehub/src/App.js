@@ -21,8 +21,7 @@ function App() {
 
   return (
     <Router>
-      <div>
-        <h1>Gamehub</h1>
+      <>
         <Routes>
          <Route path="/" element={<Dashboard/>}/>
         </Routes>
@@ -31,7 +30,7 @@ function App() {
           <Route path="/" element={<GameCard games={games}/>}/>
         </Routes>
           
-      </div>
+      </>
     </Router>
   );
 }
