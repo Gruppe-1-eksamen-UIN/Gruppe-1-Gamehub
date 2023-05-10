@@ -7,9 +7,9 @@ function GameShop({ games }) {
             <li key={game.id}>
               <div>
                 <h4>{game.name}</h4>
-                <img src={game.background_image} alt={game.name} />
+                <img src={game.background_image} alt={game.name} className="bilde"/>
                 <p>Rating: {game.rating}</p>
-                <p>Genres: {game.genres.map((genre) => genre.name).join(", ")}</p>
+                <p>Genres: {game.genres.map((genre) => genre.name).join("/")}</p>
               </div>
             </li>
           ))}

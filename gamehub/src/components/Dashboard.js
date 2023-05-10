@@ -15,7 +15,7 @@ export default function Dashboard(){
        </div>
 
        <section>
-        <GameShop/>
+    
        </section>
 
         </>
