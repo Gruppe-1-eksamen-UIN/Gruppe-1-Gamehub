@@ -1,15 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function GameCard({ games }) {
+function GameCard({ games, isLibrary }) {
+  const libraryLink = isLibrary ? '/MyGames' : '/gameshop';
+
   return (
     <div>
       <div className="header">
-        <h1>Gameshop</h1>
-        <Link to="/gameshop">
-        <button className="visit-shop-button">Visit Shop</button>
+        <h1>{isLibrary ? 'My Library' : 'Gameshop'}</h1>
+        <Link to={libraryLink}>
+          <button className="visit-shop-button">{isLibrary ? 'Library' : 'Visit Shop'}</button>
         </Link>
-        
       </div>
 
       <ul className="game-list">
@@ -19,7 +20,7 @@ function GameCard({ games }) {
               <h4>{game.name}</h4>
               <img src={game.background_image} alt={game.name} className="game-image" />
               <p>Rating: {game.rating}</p>
-              <p>Genres: {game.genres.map((genre) => genre.name).join("/")}</p>
+              <p>Genres: {game.genres.map((genre) => genre.name).join('/')}</p>
             </div>
           </li>
         ))}
