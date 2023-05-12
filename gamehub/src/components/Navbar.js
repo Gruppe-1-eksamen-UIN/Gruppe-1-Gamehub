@@ -17,7 +17,7 @@ export default function Navbar() {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/favourites">
-              My Fav
+              Favourites
             </Link>
           </li>
           <li className="nav-item">

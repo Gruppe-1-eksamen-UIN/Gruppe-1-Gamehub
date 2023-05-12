@@ -20,7 +20,7 @@ export default function Dashboard(){
             console.log(error);
           });
       }, []);
-
+      //fjerne useeffect, legge til punkter under(gameshop ,mygames, favourites)
     
 
     return (
@@ -30,7 +30,7 @@ export default function Dashboard(){
           <h1>Gamehub</h1>
           </Link>
         <Navbar/>
-        
+
         </div>
 
         <div className="tre-nye">
