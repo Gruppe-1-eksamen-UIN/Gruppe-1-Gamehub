@@ -1,7 +1,7 @@
-import Favourites from "./Favourites";
+// import Favourites from "./Favourites";
 import GameCard from "./GameCard";
-import GameShop from "./GameShop";
-import MyGames from "./MyGames";
+// import GameShop from "./GameShop";
+// import MyGames from "./MyGames";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
