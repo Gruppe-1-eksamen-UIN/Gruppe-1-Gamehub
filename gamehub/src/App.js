@@ -10,7 +10,7 @@ import Favourites from './components/Favourites';
 
 function App() {
   const [games, setGames] = useState([]);
-  const [myGames, setMyGames] = useState([])
+  
 
   return (
     <Router>

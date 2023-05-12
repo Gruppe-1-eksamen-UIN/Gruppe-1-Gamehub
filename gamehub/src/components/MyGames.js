@@ -15,6 +15,7 @@ export default function MyGames(){
         console.log(error);
       });
   }, []);
+  
     return(
       <div className="mygames">
         

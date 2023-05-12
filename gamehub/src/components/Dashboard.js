@@ -25,7 +25,7 @@ export default function Dashboard() {
         <div className="nav">
          
         <Navbar/>
-        
+
         </div>
 
         <GameCard games={games} />
