@@ -1,11 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function GameCard({ games }) {
   return (
     <div>
       <div className="header">
         <h1>Gameshop</h1>
+        <Link to="/gameshop">
         <button className="visit-shop-button">Visit Shop</button>
+        </Link>
+        
       </div>
 
       <ul className="game-list">
