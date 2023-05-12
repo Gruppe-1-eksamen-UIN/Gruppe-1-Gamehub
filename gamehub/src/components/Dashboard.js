@@ -4,6 +4,7 @@ import GameShop from "./GameShop";
 import MyGames from "./MyGames";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 // Component for Dashboard som viser forsiden med mygames, favourites og gameshop
 export default function Dashboard(){
@@ -24,10 +25,15 @@ export default function Dashboard(){
     return (
         <>
         <div className="nav">
-        <h1>Gamehub</h1>
-       <button className="button"><MyGames/></button> 
-       <button className="button"><Favourites/></button> 
-       <button className="button"><GameShop/></button> 
+          <Link to="/">
+          <h1>Gamehub</h1>
+          </Link>
+        
+      <Link to="/mygames">
+      <MyGames />
+      </Link>
+       <Favourites/>
+       <GameShop/>
         </div>
 
         <div className="tre-nye">
