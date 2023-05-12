@@ -1,42 +1,35 @@
-// Component som viser dine favourite spill 
-import { useState, useEffect } from "react"
-import Navbar from "./Navbar"
-import { Link } from "react-router-dom"
-import axios from "axios"
-export default function Favourites(){
-    const [favGames, setFavGames] = useState([])
+import { useState, useEffect } from "react";
+import Navbar from "./Navbar";
 
-    useEffect(() => {
-        axios.get('https://api.rawg.io/api/games?&page_size=5&key=5d8741db23a14d7f88a2c6ccd843ee6c')
-          .then((response) => {
-            setFavGames(response.data.results);
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      }, []);
-    return(
-        <>
-        <div className="favoritt">
+export default function Favorites() {
+  const [favorites, setFavorites] = useState([]);
 
-         <div className="nav">
-          
-        <Navbar/>
-        </div>
+  useEffect(() => {
+    const storedFavorites = localStorage.getItem('favorites');
+    if (storedFavorites) {
+      setFavorites(JSON.parse(storedFavorites));
+    }
+  }, []);
 
-          <h3>Favourites</h3> 
-          <div className="game-list">
-        {favGames.map((game) => (
-          <div key={game.id} className="game">
-            <img src={game.background_image} alt={game.name} className="bilde"  />
-            <h2>{game.name}</h2>
-            <p>Rating: {game.rating}</p>
-            <p>Genres: {game.genres.map((genre) => genre.name).join("/")}</p>
-          </div>
-        ))}
+  const handleRemoveFavorite = (id) => {
+    const updatedFavorites = favorites.filter((favorite) => favorite.id !== id);
+    setFavorites(updatedFavorites);
+    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+  };
+
+  return (
+    <div className="myfavouritegames">
+      <div className="nav">
+        <Navbar />
       </div>
-
+      <h2>My Favorites</h2>
+      {favorites.map((favorite) => (
+        <div key={favorite.id} className="game">
+          <h3>{favorite.name}</h3>
+          <img src={favorite.background_image} alt={favorite.name} />
+          <button onClick={() => handleRemoveFavorite(favorite.id)}>Remove from favorites</button>
         </div>
-        </>
-    )
+      ))}
+    </div>
+  );
 }
