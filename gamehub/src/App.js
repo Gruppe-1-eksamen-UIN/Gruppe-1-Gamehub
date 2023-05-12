@@ -18,10 +18,6 @@ function App() {
         <Routes>
          <Route path="/" element={<Dashboard/>}/>
         </Routes>
-        
-        <Routes>
-          <Route path="/" element={<GameCard games={games}/>}/>
-        </Routes>
 
         <Routes>
           <Route path="/mygames" element={<MyGames/>}/>

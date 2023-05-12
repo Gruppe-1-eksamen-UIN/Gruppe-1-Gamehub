@@ -19,15 +19,14 @@ function GameShop({ games }) {
       <div className="spill">
 
         <div className="nav">
-          <Link to="/">
-          <h1>Gamehub</h1>
-          </Link>
+          
         <Navbar/>
         
         </div>
 
-      <h3>GameShop</h3>
+        <h3>Favourites</h3>
       <div className="game-list">
+      
         {buyGames.map((game) => (
           <div key={game.id} className="game">
             <img src={game.background_image} alt={game.name} className="bilde"  />

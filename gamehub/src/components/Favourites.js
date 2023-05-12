@@ -20,9 +20,7 @@ export default function Favourites(){
         <div className="favoritt">
 
          <div className="nav">
-          <Link to="/">
-          <h1>Gamehub</h1>
-          </Link>
+          
         <Navbar/>
         </div>
 

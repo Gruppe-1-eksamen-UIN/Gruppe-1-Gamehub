@@ -19,9 +19,6 @@ export default function MyGames(){
       <div className="mygames">
         
         <div className="nav">
-          <Link to="/">
-          <h1>Gamehub</h1>
-          </Link>
         <Navbar/>
         
         </div>
