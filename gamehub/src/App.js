@@ -6,6 +6,7 @@ import Dashboard from './components/Dashboard';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import GameCard from './components/GameCard';
 import MyGames from './components/MyGames';
+import Favourites from './components/Favourites';
 
 function App() {
   const [games, setGames] = useState([]);
@@ -23,9 +24,16 @@ function App() {
         </Routes>
 
         <Routes>
-          <Route path="/mygames" element={<MyGames myGames={myGames}/>}/>
+          <Route path="/mygames" element={<MyGames/>}/>
         </Routes>
        
+        <Routes>
+          <Route path="/favourites" element={<Favourites/>}/>
+        </Routes>
+
+        <Routes>
+          <Route path="/gameshop" element={<GameShop/>}/>
+        </Routes>
           
       </>
     </Router>
