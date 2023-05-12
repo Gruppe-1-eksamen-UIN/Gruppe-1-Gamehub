@@ -30,8 +30,9 @@ export default function Dashboard(){
           </Link>
         
       <Link to="/mygames">
-      <MyGames />
+      <MyGames/>
       </Link>
+      
        <Favourites/>
        <GameShop/>
         </div>

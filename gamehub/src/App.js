@@ -5,9 +5,11 @@ import './css/main.css'
 import Dashboard from './components/Dashboard';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import GameCard from './components/GameCard';
+import MyGames from './components/MyGames';
 
 function App() {
   const [games, setGames] = useState([]);
+  const [myGames, setMyGames] = useState([])
 
   return (
     <Router>
@@ -18,6 +20,10 @@ function App() {
         
         <Routes>
           <Route path="/" element={<GameCard games={games}/>}/>
+        </Routes>
+
+        <Routes>
+          <Route path="/mygames" element={<MyGames myGames={myGames}/>}/>
         </Routes>
        
           
