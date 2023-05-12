@@ -7,7 +7,7 @@ export default function MyGames(){
   const [myGames, setMyGames] = useState([])
 
   useEffect(() => {
-    axios.get('https://api.rawg.io/api/games?&page_size=10&key=5d8741db23a14d7f88a2c6ccd843ee6c')
+    axios.get('https://api.rawg.io/api/games?&page_size=20&key=5d8741db23a14d7f88a2c6ccd843ee6c')
       .then((response) => {
         setMyGames(response.data.results);
       })
@@ -15,13 +15,11 @@ export default function MyGames(){
         console.log(error);
       });
   }, []);
+  
     return(
       <div className="mygames">
         
         <div className="nav">
-          <Link to="/">
-          <h1>Gamehub</h1>
-          </Link>
         <Navbar/>
         
         </div>

@@ -3,31 +3,64 @@ body {
   color: white;
 }
 
-.grid {
-  border: 3px solid grey;
-  margin-bottom: 10px;
-}
 
-.nav {
+/*NAV BAR*/ 
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
   background-color: black;
   padding: 1rem;
+  color: white;
 }
 
-.sanityGames {
+.navbar-title {
+  margin-right: auto;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links {
   display: flex;
-  justify-content: center;
+  gap: 10px;
+  list-style-type: none;
 }
 
-.bilde {
-  width: 35%;
+.navbar-link {
+  color: white;
+  text-decoration: none;
 }
 
-.navn {
-  list-style: none;
+.navbar-link:hover {
+  text-decoration: none;
+  color: white;
 }
 
-/*# sourceMappingURL=main.css.map */
+
+
+/* gameshop */
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.game {
+  width: 380px;
+  margin-bottom: 20px; /* Adjust the margin-bottom value as desired */
+}
+
+.game img {
+  width: 380px;
+  height: 400px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.visit-shop-button {
+  margin-bottom: 20px;
+}

@@ -10,7 +10,7 @@ import Favourites from './components/Favourites';
 
 function App() {
   const [games, setGames] = useState([]);
-  const [myGames, setMyGames] = useState([])
+  
 
   return (
     <Router>
@@ -18,17 +18,19 @@ function App() {
         <Routes>
          <Route path="/" element={<Dashboard/>}/>
         </Routes>
-        
+
         <Routes>
-          <Route path="/" element={<GameCard games={games}/>}/>
+          <Route path="/mygames" element={<MyGames/>}/>
+        </Routes>
+       
+        <Routes>
+          <Route path="/favourites" element={<Favourites/>}/>
         </Routes>
 
         <Routes>
-          <Route path="/mygames" element={<MyGames myGames={myGames}/>}/>
-          <Route path="/favourites" element={<Favourites />}/>
-          <Route path="/gameshop" element={<GameShop />}/>
+          <Route path="/gameshop" element={<GameShop/>}/>
         </Routes>
-       
+          
       </>
     </Router>
   );
