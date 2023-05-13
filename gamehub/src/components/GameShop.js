@@ -7,7 +7,7 @@ function GameShop({ games }) {
   const[buyGames, setBuyGames] = useState([])
 
   useEffect(() => {
-    axios.get('https://api.rawg.io/api/games?dates=2023-05-01,2023-05-19&ordering=-released&page_size=10&key=5d8741db23a14d7f88a2c6ccd843ee6c')
+    axios.get('https://api.rawg.io/api/games?dates=2023-05-01,2023-05-19&ordering=-released&page_size=10&key=724e4c4d78624d3db0bb4abdce8d57b3')
       .then((response) => {
         setBuyGames(response.data.results);
       })
