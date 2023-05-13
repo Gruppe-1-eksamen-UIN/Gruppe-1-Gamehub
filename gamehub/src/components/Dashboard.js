@@ -43,7 +43,7 @@ import GameCard from './GameCard';
 export default function Dashboard() {
   const [recommendedGames, setRecommendedGames] = useState([]);
   const [games, myGames] = useState([])
-  const [favoriteGames, setFavoriteGames] = useState([]); 
+  const [favouriteGames, setFavouriteGames] = useState([]); 
 
   useEffect(() => {
     axios
@@ -65,6 +65,14 @@ export default function Dashboard() {
       });
   }, []);
 
+  useEffect(() => {
+    const storedFavourites = localStorage.getItem('favourites');
+    if (storedFavourites) {
+      setFavouriteGames(JSON.parse(storedFavourites));
+    }
+  }, []);
+  
+
 
   return (
     <>
@@ -81,6 +89,13 @@ export default function Dashboard() {
         
         <GameCard games={games} isLibrary={true} />
       </div>
+
+      <div className="favorite-games">
+        <h3>Favorite Games</h3>
+          {favouriteGames.slice(0, 2).map((game) => (
+          <GameCard key={game.id} games={[game]} />
+          ))}
+      </div>  
     </>
   );
 }
