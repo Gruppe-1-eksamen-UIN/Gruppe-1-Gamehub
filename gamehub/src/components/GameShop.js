@@ -24,7 +24,7 @@ function GameShop({ games }) {
         
         </div>
 
-        <h3>Gameshop</h3>
+        <h3 className="header">Gameshop</h3>
       <div className="game-list">
       
         {buyGames.map((game) => (
@@ -33,6 +33,10 @@ function GameShop({ games }) {
             <h2>{game.name}</h2>
             <p>Rating: {game.rating}</p>
             <p>Genres: {game.genres.map((genre) => genre.name).join("/")}</p>
+            <Link to="/">
+            <button>Buy</button>
+            </Link>
+            
           </div>
         ))}
       </div>

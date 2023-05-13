@@ -7,6 +7,7 @@ body {
 	background-color: $background-color_1;
 	color: $color_1;
 }
+
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -15,24 +16,34 @@ body {
 	padding: 1rem;
 	color: $color_1;
 }
+
 .navbar-title {
 	margin-right: auto;
 	color: $color_1;
 	text-decoration: none;
 }
+
 .navbar-links {
 	display: flex;
 	gap: 10px;
 	list-style-type: none;
 }
-.navbar-link {
+
+.nav-link {
 	color: $color_1;
 	text-decoration: none;
-	&:hover {
-		text-decoration: none;
-		color: $color_1;
-	}
+    
 }
+
+.header{
+    margin-left: 40px;
+}
+
+.color {
+	color: $color_1;
+	text-decoration: none;
+}
+
 .game-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -41,17 +52,23 @@ body {
 	padding-left: 40px;
 	padding-right: 40px;
 }
+
 .game {
 	width: 380px;
 	margin-bottom: 20px;
+    border: 5px solid grey;
+    list-style: none;
 	img {
 		width: 380px;
 		height: 400px;
 	}
 }
+
 h1 {
 	margin-bottom: 10px;
 }
+
 .visit-shop-button {
 	margin-bottom: 20px;
 }
+

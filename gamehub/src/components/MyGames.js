@@ -32,7 +32,7 @@ export default function MyGames() {
         <Navbar />
       </div>
 
-      <h3>My Games-Library</h3>
+      <h3 className="header">My Games-Library</h3>
       <div className="game-list">
         {myGames.map((game) => (
           <div key={game.id} className="game">

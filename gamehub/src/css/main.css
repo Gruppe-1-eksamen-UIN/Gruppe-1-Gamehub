@@ -24,13 +24,18 @@ body {
   list-style-type: none;
 }
 
-.navbar-link {
+.nav-link {
   color: white;
   text-decoration: none;
 }
-.navbar-link:hover {
-  text-decoration: none;
+
+.header {
+  margin-left: 40px;
+}
+
+.color {
   color: white;
+  text-decoration: none;
 }
 
 .game-list {
@@ -45,6 +50,8 @@ body {
 .game {
   width: 380px;
   margin-bottom: 20px;
+  border: 5px solid grey;
+  list-style: none;
 }
 .game img {
   width: 380px;
