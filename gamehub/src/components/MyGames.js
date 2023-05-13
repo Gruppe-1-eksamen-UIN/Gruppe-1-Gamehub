@@ -22,7 +22,7 @@ export default function MyGames() {
   const addToFavourites = (game) => {
     const updatedFavourites = [...favourites, game];
     setFavourites(updatedFavourites);
-    localStorage.setItem('favorites', JSON.stringify(updatedFavourites));
+    localStorage.setItem('favourites', JSON.stringify(updatedFavourites));
   };
   console.log(favourites)
 
