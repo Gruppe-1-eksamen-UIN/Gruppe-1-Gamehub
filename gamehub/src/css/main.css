@@ -3,8 +3,6 @@ body {
   color: white;
 }
 
-
-/*NAV BAR*/ 
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -30,15 +28,11 @@ body {
   color: white;
   text-decoration: none;
 }
-
 .navbar-link:hover {
   text-decoration: none;
   color: white;
 }
 
-
-
-/* gameshop */
 .game-list {
   display: flex;
   flex-wrap: wrap;
@@ -47,11 +41,11 @@ body {
   padding-left: 40px;
   padding-right: 40px;
 }
+
 .game {
   width: 380px;
-  margin-bottom: 20px; /* Adjust the margin-bottom value as desired */
+  margin-bottom: 20px;
 }
-
 .game img {
   width: 380px;
   height: 400px;
@@ -64,3 +58,5 @@ h1 {
 .visit-shop-button {
   margin-bottom: 20px;
 }
+
+/*# sourceMappingURL=main.css.map */

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function GameCard({ games, isLibrary }) {
-  const libraryLink = isLibrary ? '/MyGames' : '/gameshop';
+  const libraryLink = isLibrary ? '/MyGames' : '/gameshop' ;
 
   return (
     <div>

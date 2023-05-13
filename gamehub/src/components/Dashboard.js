@@ -43,7 +43,7 @@ import GameCard from './GameCard';
 export default function Dashboard() {
   const [recommendedGames, setRecommendedGames] = useState([]);
   const [games, myGames] = useState([])
-  const [favoriteGames, setFavoriteGames] = useState([]);
+  const [favoriteGames, setFavoriteGames] = useState([]); 
 
   useEffect(() => {
     axios
@@ -64,6 +64,7 @@ export default function Dashboard() {
         console.log(error);
       });
   }, []);
+
 
   return (
     <>

@@ -6,7 +6,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-title">
         <Link to="/">
-          <h1>Gamehub</h1>
+          <h1 className="color">Gamehub</h1>
         </Link>
       </div>
       <ul className="navbar-links">
