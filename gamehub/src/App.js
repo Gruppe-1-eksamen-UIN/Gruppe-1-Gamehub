@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import GameCard from './components/GameCard';
 import MyGames from './components/MyGames';
 import Favourites from './components/Favourites';
+import GamePage from './components/GamePage';
 
 function App() {
   const [games, setGames] = useState([]);
@@ -14,25 +15,16 @@ function App() {
 
   return (
     <Router>
-      <>
-        <Routes>
-         <Route path="/" element={<Dashboard/>}/>
-        </Routes>
-
-        <Routes>
-          <Route path="/mygames" element={<MyGames/>}/>
-        </Routes>
-       
-        <Routes>
-          <Route path="/favourites" element={<Favourites/>}/>
-        </Routes>
-
-        <Routes>
-          <Route path="/gameshop" element={<GameShop/>}/>
-        </Routes>
-          
-      </>
-    </Router>
+    <>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/mygames" element={<MyGames />} />
+        <Route path="/favourites" element={<Favourites />} />
+        <Route path="/gameshop" element={<GameShop />} />
+        <Route path="/game/:id" element={<GamePage />} />
+      </Routes>
+    </>
+  </Router>
   );
 }
 
