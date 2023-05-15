@@ -68,6 +68,8 @@ function GameShop({ games }) {
       });
   }, []);
 
+  
+
   return (
     <div className="spill">
       <div className="nav">
