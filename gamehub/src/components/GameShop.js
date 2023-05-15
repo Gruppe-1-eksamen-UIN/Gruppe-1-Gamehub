@@ -34,7 +34,7 @@ function GameShop({ games }) {
             <p>Rating: {game.rating}</p>
             <p>Genres: {game.genres.map((genre) => genre.name).join("/")}</p>
             <Link to="/">
-            <button className="button">Buy</button>
+            <button className="buy-button">Buy</button>
             </Link>
             
           </div>

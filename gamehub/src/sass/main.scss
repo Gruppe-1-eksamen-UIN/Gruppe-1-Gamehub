@@ -71,20 +71,34 @@ h1 {
 }
 
 .button {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
     background-color: $background-color_2;
     color: $color_1;
+    padding: 7px 15px;
+    border-radius: 10px;
+    
 }
 
 .fav-button{
     background-color: $background-color_2;
     color: $color_1;
+    padding: 7px 6px;
+    border-radius: 10px;
 }
 
 .rem-fav-button{
-    margin-bottom: 15px;
+    
     background-color: $background-color_2;
     color: $color_1;
+    padding: 7px 6px;
+    border-radius: 10px;
     
+}
+
+.buy-button{
+    background-color: $background-color_2;
+    color: $color_1;
+    padding: 7px 15px;
+    border-radius: 10px;
 }
 

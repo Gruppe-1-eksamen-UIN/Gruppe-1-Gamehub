@@ -64,20 +64,32 @@ h1 {
 }
 
 .button {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background-color: black;
   color: white;
+  padding: 7px 15px;
+  border-radius: 10px;
 }
 
 .fav-button {
   background-color: black;
   color: white;
+  padding: 7px 6px;
+  border-radius: 10px;
 }
 
 .rem-fav-button {
-  margin-bottom: 15px;
   background-color: black;
   color: white;
+  padding: 7px 6px;
+  border-radius: 10px;
+}
+
+.buy-button {
+  background-color: black;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
