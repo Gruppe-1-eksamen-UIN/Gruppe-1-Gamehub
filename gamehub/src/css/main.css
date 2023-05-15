@@ -119,13 +119,6 @@ h1 {
   border-radius: 10px;
 }
 
-.buy-button {
-  background-color: black;
-  color: white;
-  padding: 7px 15px;
-  border-radius: 10px;
-}
-
 .gam {
   max-width: 800px;
   margin: 0 auto;
@@ -185,6 +178,13 @@ h1 {
 
 .gam .buy a:hover {
   background-color: #0056b3;
+}
+
+.buy-button {
+  background-color: black;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
