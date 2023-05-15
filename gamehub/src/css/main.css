@@ -24,6 +24,12 @@ body {
   list-style-type: none;
 }
 
+.navbar-links a:hover {
+  background-color: #275388;
+  border-radius: 4px;
+  padding: 5px;
+}
+
 .nav-link {
   color: white;
   text-decoration: none;
@@ -78,6 +84,67 @@ h1 {
   margin-bottom: 15px;
   background-color: black;
   color: white;
+}
+
+.gam {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #287873;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gam h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.gam img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.gam p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.gam .description {
+  margin-top: 20px;
+}
+
+.gam .tags,
+.gam .developers,
+.gam .publishers,
+.gam .platforms,
+.gam .buy {
+  margin-bottom: 10px;
+}
+
+.gam .tags span,
+.gam .developers span,
+.gam .publishers span,
+.gam .platforms span {
+  background-color: #190112;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-right: 6px;
+}
+
+.gam .buy a {
+  background-color: #007bff;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.gam .buy a:hover {
+  background-color: #0056b3;
 }
 
 /*# sourceMappingURL=main.css.map */

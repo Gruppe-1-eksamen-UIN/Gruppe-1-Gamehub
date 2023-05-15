@@ -1,8 +1,156 @@
 // Component som viser et spill med all informasjon
-export default function GamePage(){
-    return(
-        <div className="gamepage">
-        </div>
+// export default function GamePage(){
+
+//     return(
+//         <div className="gamepage">
+//         </div>
        
-    )
+//     )
+// }
+// import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+
+// export default function GamePage({ gameId }) {
+//   const [game, setGame] = useState(null);
+
+//   useEffect(() => {
+//     axios
+//       .get(`https://api.rawg.io/api/games/${gameId}?key=724e4c4d78624d3db0bb4abdce8d57b3`)
+//       .then((response) => {
+//         setGame(response.data);
+//       })
+//       .catch((error) => {
+//         console.log(error);
+//       });
+//   }, [gameId]);
+
+//   if (!game) {
+//     return <div>Loading...</div>;
+//   }
+
+//   return (
+    
+//     <div className="game-page">
+//       <h2>{game.name}</h2>
+//       <img src={game.background_image} alt={game.name} className="game-image" />
+//       <p>Rating: {game.rating}</p>
+//       <p>Genres: {game.genres.map((genre) => genre.name).join(', ')}</p>
+//       <p>Released: {game.released}</p>
+//       <p>Description: {game.description_raw}</p>
+//       {/* Additional game information can be displayed here */}
+//     </div>
+//   );
+// }
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
+// import { useParams } from "react-router-dom";
+// import Navbar from "./Navbar";
+// export default function GamePage() {
+//   const { id } = useParams();
+//   const [game, setGame] = useState(null);
+
+//   useEffect(() => {
+//     axios
+//       .get(`https://api.rawg.io/api/games/${id}?key=724e4c4d78624d3db0bb4abdce8d57b3`)
+//       .then((response) => {
+//         setGame(response.data);
+//       })
+//       .catch((error) => {
+//         console.log(error);
+//       });
+//   }, [id]);
+
+//   if (!game) {
+//     return <div>Loading...</div>;
+//   }
+
+//   return (
+//     <>
+//     <div className="nav">
+//         <Navbar />
+//       </div>
+//     <div className="gam">
+//       <h2>{game.name}</h2>
+//       <img src={game.background_image} alt={game.name} className="gamepageimg" />
+//       <p>Rating: {game.rating}</p>
+//       <p>Genres: {game.genres.map((genre) => genre.name).join(", ")}</p>
+//       <p>Released: {game.released.slice(0, 4)}</p>
+//       <p>Tags: {game.tags.map((tag) => tag.name).join(", ")}</p>
+//         <p>Developers: {game.developers.map((developer) => developer.name).join(", ")}</p>
+//         <p>Publisher: {game.publishers.map((publisher) => publisher.name).join(", ")}</p>
+//       <p>Description: {game.description_raw}</p>
+//         {/* <p>Utgivelsesår: {game.released.slice(0, 4)}</p> */}
+//         <p>Plattforms: {game.platforms.map((platform) => platform.platform.name).join(", ")}</p>
+//         <p>
+//           Buy:{" "}
+//           {game.stores.map((store) => (
+//             <a key={store.id} href={store.url} target="_blank" rel="noopener noreferrer">
+//               {store.store.name}
+//             </a>
+//           ))}
+//         </p>
+//       {/* Additional game information can be displayed */}
+//        </div>
+//        </>
+//   );
+// }
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import Navbar from "./Navbar";
+
+
+export default function GamePage() {
+  const { id } = useParams();
+  const [game, setGame] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get(`https://api.rawg.io/api/games/${id}?key=724e4c4d78624d3db0bb4abdce8d57b3`)
+      .then((response) => {
+        setGame(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [id]);
+
+  if (!game) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <>
+      <div className="nav">
+        <Navbar />
+      </div>
+      <div className="gam">
+        <h2>{game.name}</h2>
+        <img src={game.background_image} alt={game.name} className="gamepageimg" />
+        <p>Rating: {game.rating}</p>
+        <p>Genres: {game.genres.map((genre) => genre.name).join(", ")}</p>
+        <p>Released: {game.released}</p>
+        <p className="tags">
+          Tags: {game.tags.map((tag) => <span key={tag.id}>{tag.name}</span>)}
+        </p>
+        <p className="developers">
+          Developers: {game.developers.map((developer) => <span key={developer.id}>{developer.name}</span>)}
+        </p>
+        <p>Publisher: {game.publishers.map((publisher) => publisher.name).join(", ")}</p>
+      <p>Description: {game.description_raw}</p>
+        {/* <p>Utgivelsesår: {game.released.slice(0, 4)}</p> */}
+        <p>Plattforms: {game.platforms.map((platform) => platform.platform.name).join(", ")}</p>
+        <p>
+          Buy:{" "}
+          {game.stores.map((store) => (
+            <a key={store.id} href={store.url} target="_blank" rel="noopener noreferrer">
+              {store.store.name}
+            </a>
+          ))}
+        </p>
+       </div>
+       </>
+  );
 }
+
+
