@@ -17,7 +17,7 @@ function GameCard({ games, isLibrary }) {
         {games.map((game) => (
           <li className="game" key={game.id}>
             <div className="grid">
-              <Link to="/gamepage">
+              <Link to={`/game/${game.id}`}>
               <img src={game.background_image} alt={game.name} className="game-image" />
               </Link>
               <h4>{game.name}</h4>
