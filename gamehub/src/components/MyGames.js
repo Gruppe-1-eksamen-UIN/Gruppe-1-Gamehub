@@ -43,9 +43,9 @@ export default function MyGames() {
       <div className="game-list">
         {myGames.map((game) => (
           <div key={game.id} className="game">
-            <Link Link to={`/game/${game.id}`}>
-            <img src={game.background_image} alt={game.name} className="bilde" />
-            </Link>    
+             <Link to={`/game/${game.id}`}>
+              <img src={game.background_image} alt={game.name} className="game-image" />
+              </Link>
             <h2>{game.name}</h2>
             <p>Rating: {game.rating}</p>
             <p>Genres: {game.genres.map((genre) => genre.name).join("/")}</p>
