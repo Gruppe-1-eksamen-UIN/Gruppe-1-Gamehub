@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";  
 
 export default function MyGames() {
   const [myGames, setMyGames] = useState([]);
