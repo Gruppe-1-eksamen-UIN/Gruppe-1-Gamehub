@@ -23,7 +23,8 @@ export default function Favourites() {
       <div className="nav">
         <Navbar />
       </div>
-      <h2>My Favourites</h2>
+      <h3 className="header">My Favourites</h3>
+      <div className="game-list">
       {favourites.map((favourite) => (
         <div key={favourite.id} className="game">
           <img src={favourite.background_image} alt={favourite.name} />
@@ -33,6 +34,7 @@ export default function Favourites() {
           <button className="rem-fav-button" onClick={() => handleRemoveFavourite(favourite.id)}>Remove from favourites</button>
         </div>
       ))}
+      </div>
     </div>
   );
 }
