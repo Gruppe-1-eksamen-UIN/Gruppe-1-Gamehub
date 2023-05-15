@@ -37,6 +37,7 @@ body {
 
 .header{
     margin-left: 40px;
+    text-transform: uppercase;
 }
 
 .color {
@@ -58,6 +59,7 @@ body {
 	margin-bottom: 20px;
     border: 5px solid grey;
     list-style: none;
+    
 	img {
 		width: 380px;
 		height: 400px;
@@ -68,7 +70,21 @@ h1 {
 	margin-bottom: 10px;
 }
 
-.visit-shop-button {
+.button {
 	margin-bottom: 20px;
+    background-color: $background-color_2;
+    color: $color_1;
+}
+
+.fav-button{
+    background-color: $background-color_2;
+    color: $color_1;
+}
+
+.rem-fav-button{
+    margin-bottom: 15px;
+    background-color: $background-color_2;
+    color: $color_1;
+    
 }
 

@@ -25,9 +25,11 @@ export default function Favourites() {
       <h2 className="header">My Favourites</h2>
       {favourites.map((favourite) => (
         <div key={favourite.id} className="game">
-          <h3>{favourite.name}</h3>
           <img src={favourite.background_image} alt={favourite.name} />
-          <button onClick={() => handleRemoveFavourite(favourite.id)}>Remove from favourites</button>
+          <h3>{favourite.name}</h3>
+          <p>Rating: {favourite.rating}</p>
+            <p>Genres: {favourite.genres.map((genre) => genre.name).join('/')}</p>
+          <button className="rem-fav-button" onClick={() => handleRemoveFavourite(favourite.id)}>Remove from favourites</button>
         </div>
       ))}
     </div>

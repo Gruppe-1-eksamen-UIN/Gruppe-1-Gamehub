@@ -40,7 +40,7 @@ export default function MyGames() {
             <h2>{game.name}</h2>
             <p>Rating: {game.rating}</p>
             <p>Genres: {game.genres.map((genre) => genre.name).join("/")}</p>
-            <button onClick={() => addToFavourites(game)}>Add to favourites</button>
+            <button className="fav-button" onClick={() => addToFavourites(game)}>Add to favourites</button>
           </div>
         ))}
       </div>

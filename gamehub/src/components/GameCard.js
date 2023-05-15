@@ -9,7 +9,7 @@ function GameCard({ games, isLibrary }) {
       <div className="header">
         <h1>{isLibrary ? 'My Library' : 'Gameshop'}</h1>
         <Link to={libraryLink}>
-          <button className="visit-shop-button">{isLibrary ? 'Library' : 'Visit Shop'}</button>
+          <button className="button">{isLibrary ? 'Library' : 'Visit Shop'}</button>
         </Link>
       </div>
 
