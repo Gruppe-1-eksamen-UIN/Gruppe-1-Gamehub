@@ -74,7 +74,7 @@ function GameShop({ games }) {
         <Navbar />
       </div>
 
-        <h3>Gameshop</h3>
+        <h3 className="header">Gameshop</h3>
       <div className="game-list">
         {buyGames.map((game) => (
           <div key={game.id} className="game">
