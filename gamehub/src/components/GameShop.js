@@ -74,7 +74,7 @@ function GameShop({ games }) {
         <Navbar />
       </div>
 
-      <h3 className="header">Gameshop</h3>
+        <h3>Gameshop</h3>
       <div className="game-list">
         {buyGames.map((game) => (
           <div key={game.id} className="game">
@@ -82,8 +82,8 @@ function GameShop({ games }) {
             <h2>{game.name}</h2>
             <p>Rating: {game.rating}</p>
             <p>Genres: {game.genres.map((genre) => genre.name).join("/")}</p>
-            <Link to={`/game/${game.id}`}>
-              <button className="button">Buy</button>
+            <Link to="/">
+            <button className="buy-button">Buy</button>
             </Link>
           </div>
         ))}
