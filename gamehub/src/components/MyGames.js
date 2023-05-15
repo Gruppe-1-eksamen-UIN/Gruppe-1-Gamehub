@@ -20,10 +20,16 @@ export default function MyGames() {
   }, []);
 
   const addToFavourites = (game) => {
-    const updatedFavourites = [...favourites, game];
-    setFavourites(updatedFavourites);
-    localStorage.setItem('favourites', JSON.stringify(updatedFavourites));
+    const storedFavourites = JSON.parse(localStorage.getItem('favourites')) || [];
+    const alreadyAdded = storedFavourites.some((favourite) => favourite.id === game.id);
+    if (!alreadyAdded) {
+      const updatedFavourites = [...storedFavourites, game];
+      setFavourites(updatedFavourites);
+      localStorage.setItem('favourites', JSON.stringify(updatedFavourites));
+    }
   };
+  
+  
   console.log(favourites)
 
   return (

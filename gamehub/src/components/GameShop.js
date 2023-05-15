@@ -24,7 +24,7 @@ function GameShop({ games }) {
         
         </div>
 
-        <h3 className="header">Gameshop</h3>
+        <h3>Gameshop</h3>
       <div className="game-list">
       
         {buyGames.map((game) => (
