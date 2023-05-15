@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 
 export default function Favourites() {
-  const [favourites, setFavourites] = useState([]);
-
+  const [favourites, setFavourites] = 
+  useState(JSON.parse(localStorage.getItem('favourites')) || []);
+  
   useEffect(() => {
     const storedFavourites = localStorage.getItem('favourites');
     if (storedFavourites) {
@@ -22,7 +23,7 @@ export default function Favourites() {
       <div className="nav">
         <Navbar />
       </div>
-      <h2 className="header">My Favourites</h2>
+      <h2>My Favourites</h2>
       {favourites.map((favourite) => (
         <div key={favourite.id} className="game">
           <img src={favourite.background_image} alt={favourite.name} />
