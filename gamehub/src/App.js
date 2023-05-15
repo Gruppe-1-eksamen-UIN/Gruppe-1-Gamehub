@@ -10,7 +10,7 @@ import Favourites from './components/Favourites';
 import GamePage from './components/GamePage';
 
 function App() {
-  const [games, setGames] = useState([]);
+  
   
 
   return (
