@@ -17,8 +17,8 @@ function GameCard({ games, isLibrary }) {
         {games.map((game) => (
           <li className="game" key={game.id}>
             <div className="grid">
-              <h4>{game.name}</h4>
               <img src={game.background_image} alt={game.name} className="game-image" />
+              <h4>{game.name}</h4>
               <p>Rating: {game.rating}</p>
               <p>Genres: {game.genres.map((genre) => genre.name).join('/')}</p>
             </div>

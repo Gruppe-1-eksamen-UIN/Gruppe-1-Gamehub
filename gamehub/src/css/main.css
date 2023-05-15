@@ -47,16 +47,28 @@ body {
   padding-left: 40px;
   padding-right: 40px;
 }
+@media (max-width: 1250px) {
+  .game-list {
+    justify-content: center;
+  }
+}
 
 .game {
   width: 380px;
   margin-bottom: 20px;
   border: 5px solid grey;
   list-style: none;
+  background-color: black;
 }
 .game img {
   width: 380px;
   height: 400px;
+}
+@media (max-width: 1250px) {
+  .game {
+    max-width: 380px;
+    width: 100%;
+  }
 }
 
 h1 {
