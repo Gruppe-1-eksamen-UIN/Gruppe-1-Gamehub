@@ -11,6 +11,12 @@ body {
   padding: 1rem;
   color: white;
 }
+@media (max-width: 308px) {
+  .navbar {
+    max-width: 308px;
+    width: 100%;
+  }
+}
 
 .navbar-title {
   margin-right: auto;
@@ -66,6 +72,16 @@ body {
 }
 @media (max-width: 1250px) {
   .game {
+    max-width: 380px;
+    width: 100%;
+  }
+}
+@media (max-width: 460px) {
+  .game {
+    max-width: 380px;
+    width: 100%;
+  }
+  .game img {
     max-width: 380px;
     width: 100%;
   }
