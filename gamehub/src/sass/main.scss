@@ -59,11 +59,10 @@ padding: 5px;
 .game-list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-between; 
 	align-items: flex-start;
 	padding-left: 40px;
 	padding-right: 40px;
-
     @media(max-width: 1250px) {
         justify-content: center;
     }
@@ -115,7 +114,7 @@ h1 {
     color: $color_1;
     padding: 7px 15px;
     border-radius: 10px;
-    
+    margin-left: 40px;
     
 }
 

@@ -39,12 +39,14 @@ export default function MyGames() {
 
       <h3 className="header">My Games-Library</h3>
       <div className="game-list">
+        
         {/* Map over myGames and render a GameCard for each game */}
         {myGames.map((game) => (
           <GameCard key={game.id} games={[game]}>
             <button className="fav-button" onClick={() => addToFavourites(game)}>Add to favourites</button>
           </GameCard>
         ))}
+        
       </div>
     </div>
   );

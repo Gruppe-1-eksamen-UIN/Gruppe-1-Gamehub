@@ -6,7 +6,7 @@ function SanityGames(){
   const [products, setProducts] = useState([]);
   const builder = imageUrlBuilder(Client)
 
-  /*function urlFor(source) {
+  function urlFor(source) {
     return builder.image(source)
   }
 
@@ -34,7 +34,7 @@ function SanityGames(){
     ))}
   </ul>
 </div>    
-    )*/
+    )
 }
 
 export default SanityGames;
