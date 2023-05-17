@@ -13,7 +13,7 @@ function GameCard({games, children}) {
               <img src={game.background_image} alt={game.name} className="game-image" />
               </Link>
               <h4>{game.name}</h4>
-              <p>Rating: {game.rating}</p>
+              <p>{game.rating > 0 ? `Rating: ${game.rating}` : `Release Date: ${game.released}`}</p>
               <p>Genres: {game.genres.map((genre) => genre.name).join('/')}</p>
             </div>
             {children}

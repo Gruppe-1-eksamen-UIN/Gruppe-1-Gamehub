@@ -32,9 +32,9 @@ export default function GamePage() {
       <div className="gam">
         <h2>{game.name}</h2>
         <img src={game.background_image} alt={game.name} className="gamepageimg" />
-        <p>Rating: {game.rating}</p>
+        <p>{game.rating > 0 ? `Rating: ${game.rating}` : `Rating: N.A`}</p>
         <p>Genres: {game.genres.map((genre) => genre.name).join(", ")}</p>
-        <p>Released: {game.released}</p>
+        <p>Release Date: {game.released}</p>
         <p className="tags">
           Tags: {game.tags.map((tag) => <span key={tag.id}>{tag.name}</span>)}
         </p>
