@@ -11,7 +11,7 @@ function GameShop({ games }) {
   useEffect(() => {
     axios
       .get(
-        "https://api.rawg.io/api/games?dates=2023-05-01,2023-05-19&ordering=-released&page_size=10&key=724e4c4d78624d3db0bb4abdce8d57b3"
+        "https://api.rawg.io/api/games?dates=2023-05-16,2023-05-31&ordering=-released&page_size=10&key=724e4c4d78624d3db0bb4abdce8d57b3"
       )
       .then((response) => {
         setBuyGames(response.data.results);
@@ -20,6 +20,8 @@ function GameShop({ games }) {
         console.log(error);
       });
   }, []);
+
+
 
   
 
