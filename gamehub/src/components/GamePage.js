@@ -48,7 +48,7 @@ export default function GamePage() {
         <p>
           Buy:{" "}
           {game.stores.map((store) => (
-            <a key={store.id} href={`https://${store.store.domain}`} target="_blank" rel="noopener noreferrer">
+            <a key={store.id} href={`https://${store.store.domain}?search=${encodeURIComponent(game.name)}`} target="_blank" rel="noopener noreferrer">
               {store.store.name}
             </a>
           ))}
