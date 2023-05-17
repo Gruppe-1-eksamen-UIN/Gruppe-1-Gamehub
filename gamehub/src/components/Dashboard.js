@@ -47,8 +47,7 @@ export default function Dashboard() {
   const [favouriteGames, setFavouriteGames] = useState([]); 
 
   useEffect(() => {
-    axios
-      .get('https://api.rawg.io/api/games?dates=2023-05-01,2023-05-19&ordering=-released&page_size=3&key=724e4c4d78624d3db0bb4abdce8d57b3')
+    axios.get('https://api.rawg.io/api/games?dates=2023-05-01,2023-05-19&ordering=-released&page_size=3&key=724e4c4d78624d3db0bb4abdce8d57b3')
       .then((response) => {
         setRecommendedGames(response.data.results);
       })
@@ -56,8 +55,7 @@ export default function Dashboard() {
         console.log(error);
       });
 
-    axios
-      .get('https://api.rawg.io/api/games?genres=sports&page_size=4&key=724e4c4d78624d3db0bb4abdce8d57b3')
+    axios.get('https://api.rawg.io/api/games?genres=sports&page_size=4&key=724e4c4d78624d3db0bb4abdce8d57b3')
       .then((response) => {
         myGames(response.data.results);
       })
