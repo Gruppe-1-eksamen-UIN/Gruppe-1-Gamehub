@@ -18,6 +18,7 @@ function GameCard({games, children}) {
         ))}
       </ul>
     </div>
+    //lagd en map som henter ut informasjon om spillet. det henter ut navn, bilde , sjanger og rating. annen informasjon vil da være tilgjengelig i gamepage.
   );
 }
 

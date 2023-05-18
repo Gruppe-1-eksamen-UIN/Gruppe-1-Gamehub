@@ -42,7 +42,7 @@ export default function MyGames() {
         <Navbar />
       </div>
 
-      <h3 className="header">My Games-Library</h3>
+      <h3 className="header">My Games-Library - {myGames.length}</h3>
       <div className="game-list">
         {/* Map over myGames and render a GameCard for each game */}
         {myGames.map((game) => (

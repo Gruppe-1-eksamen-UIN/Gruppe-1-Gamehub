@@ -8,6 +8,7 @@ export default function Dashboard() {
   const [recommendedGames, setRecommendedGames] = useState([]);
   const [games, setGames] = useState([]);
   const [favouriteGames, setFavouriteGames] = useState([]);
+  
 
   useEffect(() => {
     axios.get('https://api.rawg.io/api/games?dates=2023-05-01,2023-05-19&ordering=-released&page_size=3&key=724e4c4d78624d3db0bb4abdce8d57b3')
@@ -80,14 +81,14 @@ export default function Dashboard() {
       </div>
 
       <div>
-        <h3 className='header'>My Games</h3>
+        <h3 className='header'>My Games - {games.length}</h3>
         <Link to="/mygames">
           <button className='button'>My-Library</button>
         </Link>
         <GameCard games={games} isLibrary={true} />
       </div>
       <div>
-        <h3 className='header'>Favorite Games: {favouriteGames.length}</h3>
+        <h3 className='header'>Favorite Games - {favouriteGames.length}</h3>
         <div className="game-list">
           {favouriteGames.slice(0, 3).map((game) => (
             <GameCard key={game.id} games={[game]} />

@@ -49,8 +49,10 @@ export default function GamePage() {
               {store.store.name}
             </a>
           ))}
+          
         </p>
        </div>
        </>
+       //skrevet ut en map som er lik gamecard, men inneholder mer informasjon om spillet man klikker seg inn på.
   );
 }

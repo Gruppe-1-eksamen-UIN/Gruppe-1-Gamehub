@@ -25,7 +25,7 @@ export default function Favourites() {
         <Navbar />
       </div>
 
-      <h3 className="header">My Favourites</h3> 
+      <h3 className="header">My Favourites - {favourites.length}</h3> 
       <div className="game-list"> 
       {favourites.map((favourite) => (
           <GameCard key={favourite.id} games={[favourite]}>

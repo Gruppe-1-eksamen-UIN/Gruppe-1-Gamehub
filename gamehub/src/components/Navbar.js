@@ -32,5 +32,7 @@ export default function Navbar() {
         </li>
       </ul>
     </nav>
+    //vi lagde en navbar komponent som brukes for å kunne linke opp de forskjellige komponentene vi navbar-en via routing.
+    
   );
 }
