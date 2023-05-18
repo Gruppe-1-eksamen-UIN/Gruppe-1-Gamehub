@@ -7,4 +7,4 @@ const client = createClient({
   apiVersion: "2021-10-21"
 });
 
-export default client;
+export default function Client();
