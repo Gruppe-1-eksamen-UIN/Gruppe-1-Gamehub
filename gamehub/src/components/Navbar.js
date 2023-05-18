@@ -10,6 +10,11 @@ export default function Navbar() {
         </Link>
       </div>
       <ul className="navbar-links">
+      <li>
+          <Link className="nav-link" to="/">
+            Home
+          </Link>
+        </li>
         <li>
           <Link className="nav-link" to="/mygames">
             My Games
