@@ -83,7 +83,7 @@ padding: 5px;
 	margin-bottom: 20px;
     border: 5px solid rgb(93, 90, 93);
     list-style: none;
-	background-image: linear-gradient(to right, #434343 0%, black 100%);
+	  background-image: linear-gradient(to right, #434343 0%, black 100%);
     border-radius: 25px;
     padding: 1rem;
 	img {
@@ -215,6 +215,7 @@ h1 {
 
 .footer {
   background-color: #1b2838;
+  // background-image: linear-gradient(to right, #434343 0%, #1b2838 100%);
   color: white;
   padding: 20px;
   text-align: center;
