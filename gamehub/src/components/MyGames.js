@@ -11,7 +11,7 @@ export default function MyGames() {
   useEffect(() => {
     axios
       .get(
-        "https://api.rawg.io/api/games?&page_size=20&key=724e4c4d78624d3db0bb4abdce8d57b3"
+        "https://api.rawg.io/api/games?genres=sports&page_size=20&key=724e4c4d78624d3db0bb4abdce8d57b3"
       )
       .then((response) => {
         setMyGames(response.data.results);
