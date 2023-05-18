@@ -96,8 +96,8 @@ export default function Dashboard() {
         <GameCard games={games} isLibrary={true} />
       </div>
       <div>
-        <h3 className='header'>Favorite Games</h3>
-        <div className='game-list'>
+        <h3 className='header'>Favorite Games: {favouriteGames.length}</h3>
+        <div className="game-list">
           {favouriteGames.slice(0, 3).map((game) => (
             <GameCard key={game.id} games={[game]} />
           ))}
