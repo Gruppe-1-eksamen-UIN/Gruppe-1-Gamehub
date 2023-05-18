@@ -87,8 +87,7 @@ export default function Dashboard() {
         ))}
       </div>
 
-=======
->>>>>>> Stashed changes
+
       <div>
         <h3 className='header'>My Games</h3>
         <Link to="/mygames">
