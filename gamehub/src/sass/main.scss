@@ -1,11 +1,14 @@
 $color_1: white;
+$color_2:#000000;
 $background-color_1: #1b2838;
 $background-color_2: black;
+$background-color_3:#1b5ea4;
+$background-color_4:#b5cce3;
 
 
 
 body {
-	background-color: $background-color_1;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	color: $color_1;
 }
 
@@ -13,9 +16,12 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: $background-color_2;
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
 	padding: 1rem;
 	color: $color_1;
+	h1{
+		font-size: 30px;
+	}
     @media(max-width: 308px){
         max-width: 308px;
         width: 100%;
@@ -23,10 +29,12 @@ body {
     
 }
 
+
 .navbar-title {
 	margin-right: auto;
 	color: $color_1;
 	text-decoration: none;
+	
 }
 
 .navbar-links {
@@ -35,7 +43,8 @@ body {
 	list-style-type: none;
 }
 .navbar-links a:hover{
-background-color: #275388;
+background-color: #bdcbdb;
+color: #190112;
 border-radius: 4px;
 padding: 5px;
 }
@@ -72,14 +81,15 @@ padding: 5px;
 .game {
 	width: 380px;
 	margin-bottom: 20px;
-    border: 5px solid grey;
+    border: 5px solid rgb(93, 90, 93);
     list-style: none;
-    background-color: $background-color_2;
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
     border-radius: 25px;
     padding: 1rem;
 	img {
 		width: 380px;
 		height: 400px;
+		border-radius: 5px;
 	}
     @media(max-width: 1250px) {
         max-width: 380px;
@@ -110,8 +120,8 @@ h1 {
 
 .button {
 	margin-bottom: 10px;
-    background-color: $background-color_2;
-    color: $color_1;
+    background-color: $background-color_4;
+    color: $color_2;
     padding: 7px 15px;
     border-radius: 10px;
     margin-left: 40px;
@@ -119,16 +129,16 @@ h1 {
 }
 
 .fav-button{
-    background-color: $background-color_2;
-    color: $color_1;
+    background-color: $background-color_4;
+    color: $color_2;
     padding: 7px 6px;
     border-radius: 10px;
 }
 
 .rem-fav-button{
     
-    background-color: $background-color_2;
-    color: $color_1;
+    background-color: $background-color_4;
+    color: $color_2;
     padding: 7px 6px;
     border-radius: 10px;
     
