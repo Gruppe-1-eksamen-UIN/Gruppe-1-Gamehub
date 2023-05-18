@@ -97,7 +97,7 @@ export default function Dashboard() {
       </div>
       <div>
         <h3 className='header'>Favorite Games</h3>
-        <div className='game-list'>
+        <div className="game-list">
           {favouriteGames.slice(0, 3).map((game) => (
             <GameCard key={game.id} games={[game]} />
           ))}
