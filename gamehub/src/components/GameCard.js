@@ -2,15 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function GameCard({games, children}) {
-
   return (
     <div >
       <ul className="game-list">
         {games.map((game) => (
           <li className="game" key={game.id}>
-            <div className="grid">
+            <div>
               <Link to={`/game/${game.id}`}>
-              <img src={game.background_image} alt={game.name} className="game-image" />
+              <img src={game.background_image} alt={game.name} />
               </Link>
               <h4 >{game.name}</h4>
               <p>{game.rating > 0 ? `Rating: ${game.rating}` : `Release Date: ${game.released}`}</p>

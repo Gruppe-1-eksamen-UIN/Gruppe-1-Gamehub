@@ -20,7 +20,7 @@ export default function Favourites() {
   };
 
   return (
-    <div className="myfavouritegames">
+    <div>
       <div className="nav">
         <Navbar />
       </div>
@@ -30,8 +30,7 @@ export default function Favourites() {
       {favourites.map((favourite) => (
           <GameCard key={favourite.id} games={[favourite]}>
             <button className="rem-fav-button" onClick={() => handleRemoveFavourite(favourite.id)}>Remove from favourites</button>
-          </GameCard> 
-          
+          </GameCard>
       ))}
       </div>
     </div>

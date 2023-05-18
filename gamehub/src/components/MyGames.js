@@ -37,7 +37,7 @@ export default function MyGames() {
   };
 
   return (
-    <div className="mygames">
+    <div>
       <div className="nav">
         <Navbar />
       </div>
