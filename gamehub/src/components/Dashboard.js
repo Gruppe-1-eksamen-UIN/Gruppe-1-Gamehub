@@ -34,32 +34,24 @@ export default function Dashboard() {
     }
   }, []);
 
-  const generateStoreURL = (storeName, gameName) => {
+  function generateStoreURL(storeName, gameName) {
     let url = '';
-
-    switch (storeName) {
-      case 'Steam':
-        url = `https://store.steampowered.com/search/?term=${encodeURIComponent(gameName)}&supportedlang=english&ndl=1`;
-        break;
-      case 'GOG':
-        url = `https://store.epicgames.com/en-US/browse?q=${encodeURIComponent(gameName)}&sortBy=relevancy&sortDir=DESC&count=40`;
-        break;
-      case 'Epic Games':
-        url = `https://store.epicgames.com/en-US/browse?q=${encodeURIComponent(gameName)}&sortBy=relevancy&sortDir=DESC&count=40`;
-        break;
-      case 'Nintendo Store':
-        url = `https://www.nintendo.com/search/?q=${encodeURIComponent(gameName)}&p=1&cat=gme&sort=df`;
-        break;
-      case 'PlayStation Store':
-        url = `https://store.playstation.com/en-no/search/${encodeURIComponent(gameName)}`;
-        break;
-      default:
-        url = '';
+  
+    if (storeName === 'Steam') {
+      url = `https://store.steampowered.com/search/?term=${encodeURIComponent(gameName)}&supportedlang=english&ndl=1`;
+    } else if (storeName === 'GOG' || storeName === 'Epic Games') {
+      url = `https://store.epicgames.com/en-US/browse?q=${encodeURIComponent(gameName)}&sortBy=relevancy&sortDir=DESC&count=40`;
+    } else if (storeName === 'Nintendo Store') {
+      url = `https://www.nintendo.com/search/?q=${encodeURIComponent(gameName)}&p=1&cat=gme&sort=df`;
+    } else if (storeName === 'PlayStation Store') {
+      url = `https://store.playstation.com/en-no/search/${encodeURIComponent(gameName)}`;
+    } else {
+      url = '';
     }
-
+  
     return url;
   };
-
+  //la til if else fra gameshop 
   return (
     <>
       <div className="nav">

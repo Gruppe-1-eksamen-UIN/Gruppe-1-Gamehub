@@ -32,6 +32,8 @@ function GameShop({ games }) {
     }
   
     return url;
+  //lagde en function som vil føre det spillet du "kjøper" til f.eks steam. vi gjorde dette ved å sette storename === '' som vil da føre deg til url-en til siden.
+  //brukte if else for å sette det slik at hvis du trykker på linken på buy knappene vil den føre til de sammenhengende "stores". 
   };
 
   return (
@@ -47,6 +49,7 @@ function GameShop({ games }) {
             <button className="buy-button">
               {game.stores && game.stores.length > 0 ? (
                 <a href={generateStoreURL(game.stores[0].store.name, game.name)}>Buy</a>
+                //satt inn 
               ) : (
                 "Buy"
               )}
