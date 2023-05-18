@@ -33,7 +33,7 @@ export default function Dashboard() {
       setFavouriteGames(JSON.parse(storedFavourites));
     }
   }, []);
-
+  //har brukt useeffect og axios.get for å hente ut api fra rawg 
   function generateStoreURL(storeName, gameName) {
     let url = '';
   
@@ -51,7 +51,7 @@ export default function Dashboard() {
   
     return url;
   };
-  //la til if else fra gameshop 
+  //la til if else fra gameshop.
   return (
     <>
       <div className="nav">

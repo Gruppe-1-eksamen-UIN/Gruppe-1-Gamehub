@@ -49,7 +49,7 @@ function GameShop({ games }) {
             <button className="buy-button">
               {game.stores && game.stores.length > 0 ? (
                 <a href={generateStoreURL(game.stores[0].store.name, game.name)}>Buy</a>
-                //satt inn 
+                //satt inn functionen "generatestoreurl" inn i button som da vil mappe ut til spillet og vil føre deg videre til "stores".
               ) : (
                 "Buy"
               )}
