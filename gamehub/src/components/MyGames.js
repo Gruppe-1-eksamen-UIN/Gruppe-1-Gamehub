@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import GameCard from "./GameCard"; // Import the GameCard component
+import GameCard from "./GameCard";
 import { Link } from "react-router-dom";
 
 export default function MyGames() {
@@ -22,15 +22,19 @@ export default function MyGames() {
   }, []);
 
   const addToFavourites = (game) => {
-    const storedFavourites = JSON.parse(localStorage.getItem('favourites')) || [];
+    const storedFavourites = JSON.parse(localStorage.getItem("favourites")) || [];
     const alreadyAdded = storedFavourites.some((favourite) => favourite.id === game.id);
     if (!alreadyAdded) {
       const updatedFavourites = [...storedFavourites, game];
       setFavourites(updatedFavourites);
-      localStorage.setItem('favourites', JSON.stringify(updatedFavourites));
+      localStorage.setItem("favourites", JSON.stringify(updatedFavourites));
     }
   };
-  
+
+  const isAddedToFavourites = (game) => {
+    return favourites.some((favourite) => favourite.id === game.id);
+  };
+
   return (
     <div className="mygames">
       <div className="nav">
@@ -39,14 +43,18 @@ export default function MyGames() {
 
       <h3 className="header">My Games-Library</h3>
       <div className="game-list">
-        
         {/* Map over myGames and render a GameCard for each game */}
         {myGames.map((game) => (
           <GameCard key={game.id} games={[game]}>
-            <button className="fav-button" onClick={() => addToFavourites(game)}>Add to favourites</button>
+            <button
+              className="fav-button"
+              onClick={() => addToFavourites(game)}
+              disabled={isAddedToFavourites(game)}
+            >
+              {isAddedToFavourites(game) ? "Added" : "Add to favourites"}
+            </button>
           </GameCard>
         ))}
-        
       </div>
     </div>
   );

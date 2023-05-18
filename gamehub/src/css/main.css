@@ -196,4 +196,26 @@ h1 {
   border-radius: 10px;
 }
 
+.footer {
+  background-color: #1b2838;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
 /*# sourceMappingURL=main.css.map */
