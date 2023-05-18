@@ -8,6 +8,7 @@ import GameCard from './components/GameCard';
 import MyGames from './components/MyGames';
 import Favourites from './components/Favourites';
 import GamePage from './components/GamePage';
+import Footer from './components/Footer';
 
 function App() {
   
@@ -23,8 +24,10 @@ function App() {
         <Route path="/gameshop" element={<GameShop />} />
         <Route path="/game/:id" element={<GamePage />} />
       </Routes>
+      <Footer />
     </>
   </Router>
+  
   );
 }
 
