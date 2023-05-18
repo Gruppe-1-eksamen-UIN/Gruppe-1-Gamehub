@@ -79,7 +79,6 @@ export default function Dashboard() {
         ))}
       </div>
 
-
       <div>
         <h3 className='header'>My Games</h3>
         <Link to="/mygames">
