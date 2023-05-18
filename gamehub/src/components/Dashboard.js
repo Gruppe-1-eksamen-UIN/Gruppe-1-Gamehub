@@ -100,7 +100,7 @@ export default function Dashboard() {
           {favouriteGames.slice(0, 3).map((game) => (
           <GameCard key={game.id} games={[game]} />
           ))}
-      </div>  
+      </div> 
     </>
   );
 }
