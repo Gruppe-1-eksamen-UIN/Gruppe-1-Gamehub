@@ -19,13 +19,15 @@ export default function MyGames() {
       .catch((error) => {
         console.log(error);
       });
+
+    const storedFavourites = JSON.parse(localStorage.getItem("favourites")) || [];
+    setFavourites(storedFavourites);
   }, []);
 
   const addToFavourites = (game) => {
-    const storedFavourites = JSON.parse(localStorage.getItem("favourites")) || [];
-    const alreadyAdded = storedFavourites.some((favourite) => favourite.id === game.id);
+    const alreadyAdded = favourites.some((favourite) => favourite.id === game.id);
     if (!alreadyAdded) {
-      const updatedFavourites = [...storedFavourites, game];
+      const updatedFavourites = [...favourites, game];
       setFavourites(updatedFavourites);
       localStorage.setItem("favourites", JSON.stringify(updatedFavourites));
     }
