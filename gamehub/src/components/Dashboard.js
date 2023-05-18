@@ -18,7 +18,7 @@ export default function Dashboard() {
       .catch((error) => {
         console.log(error);
       });
-
+      //måtte legge til en dato fordi ellers vil api-et ta tak i spill som ikke har kommet ut.
     axios.get('https://api.rawg.io/api/games?genres=sports&page_size=4&key=724e4c4d78624d3db0bb4abdce8d57b3')
       .then((response) => {
         setGames(response.data.results);
