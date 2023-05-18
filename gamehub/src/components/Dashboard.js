@@ -87,6 +87,8 @@ export default function Dashboard() {
         ))}
       </div>
 
+=======
+>>>>>>> Stashed changes
       <div>
         <h3 className='header'>My Games</h3>
         <Link to="/mygames">
@@ -94,7 +96,6 @@ export default function Dashboard() {
         </Link>
         <GameCard games={games} isLibrary={true} />
       </div>
-
       <div>
         <h3 className='header'>Favorite Games</h3>
         <div className='game-list'>

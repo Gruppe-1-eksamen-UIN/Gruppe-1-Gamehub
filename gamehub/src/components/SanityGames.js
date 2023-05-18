@@ -18,8 +18,6 @@ function SanityGames(){
   fetchProducts();
   }, []);
 
-
-  
   return(
   <div>
     <h1>Products</h1>
