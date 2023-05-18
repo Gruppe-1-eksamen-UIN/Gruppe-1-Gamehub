@@ -21,7 +21,7 @@ function App() {
       <Footer />
     </>
   </Router>
-  
+  //bruker routing for å hente ut komponentene inn på app.js.
   );
 }
 
