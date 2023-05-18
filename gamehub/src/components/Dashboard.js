@@ -79,7 +79,7 @@ export default function Dashboard() {
         <Navbar />
       </div>
 
-      <div className="tre-nye">
+      <div>
         <h3 className='header'>GameShop</h3>
         <Link to="/gameshop">
         <button className='button'>Visit Shop</button>
@@ -87,7 +87,7 @@ export default function Dashboard() {
         <GameCard games={recommendedGames} />
       </div>
 
-      <div className="myGames">
+      <div>
       <h3 className='header'>My Games</h3>
         <Link to="/mygames">
         <button className='button'>My-Library</button>
@@ -95,7 +95,7 @@ export default function Dashboard() {
         <GameCard games={games} isLibrary={true} />
       </div>
 
-      <div className="favorite-games">
+      <div>
         <h3 className='header'>Favorite Games</h3>
           {favouriteGames.slice(0, 3).map((game) => (
           <GameCard key={game.id} games={[game]} />

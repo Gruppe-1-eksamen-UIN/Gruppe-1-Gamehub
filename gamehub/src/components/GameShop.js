@@ -39,7 +39,7 @@ function GameShop({ games }) {
   };
 
   return (
-    <div className="spill">
+    <div>
       <div className="nav">
         <Navbar />
       </div>
