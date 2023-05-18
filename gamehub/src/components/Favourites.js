@@ -20,7 +20,7 @@ export default function Favourites() {
   };
 
   return (
-    <div className="myfavouritegames">
+    <div>
       <div className="nav">
         <Navbar />
       </div>

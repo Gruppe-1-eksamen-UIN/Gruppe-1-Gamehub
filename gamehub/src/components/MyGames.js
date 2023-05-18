@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import GameCard from "./GameCard";
-import { Link } from "react-router-dom";
+
 
 export default function MyGames() {
   const [myGames, setMyGames] = useState([]);
@@ -38,7 +38,7 @@ export default function MyGames() {
   };
 
   return (
-    <div className="mygames">
+    <div>
       <div className="nav">
         <Navbar />
       </div>

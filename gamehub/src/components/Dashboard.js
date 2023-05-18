@@ -71,69 +71,32 @@
       }
     }, []);
   
-    const generateStoreURL = (storeName, gameName) => {
-      let url = '';
-  
-      switch (storeName) {
-        case 'Steam':
-          url = `https://store.steampowered.com/search/?term=${encodeURIComponent(gameName)}&supportedlang=english&ndl=1`;
-          break;
-        case 'GOG':
-          url = `https://store.epicgames.com/en-US/browse?q=${encodeURIComponent(gameName)}&sortBy=relevancy&sortDir=DESC&count=40`;
-          break;
-        case 'Epic Games':
-          url = `https://store.epicgames.com/en-US/browse?q=${encodeURIComponent(gameName)}&sortBy=relevancy&sortDir=DESC&count=40`;
-          break;
-        case 'Nintendo Store':
-          url = `https://www.nintendo.com/search/?q=${encodeURIComponent(gameName)}&p=1&cat=gme&sort=df`;
-          break;
-        case 'PlayStation Store':
-          url = `https://store.playstation.com/en-no/search/${encodeURIComponent(gameName)}`;
-          break;
-        default:
-          url = '';
-      }
-  
-      return url;
-    };
-  
-    return (
-      <>
-        <div className="nav">
-          <Navbar />
-        </div>
-  
-        <div className="tre-nye">
-          <h3 className='header'>GameShop</h3>
-          <Link to="/gameshop">
-            <button className='button'>Visit Shop</button>
-          </Link>
-          <div className="game-list">
-            {recommendedGames.map((game) => (
-              <GameCard key={game.id} games={[game]}>
-                <button className="buy-button">
-                  {game.stores && game.stores.length > 0 ? (
-                    <a href={generateStoreURL(game.stores[0].store.name, game.name)}>Buy</a>
-                  ) : (
-                    "Buy"
-                  )}
-                </button>
-              </GameCard>
-            ))}
-          </div>
-        </div>
-  
-        <div className="myGames">
-          <h3 className='header'>My Games</h3>
-          <Link to="/mygames">
-            <button className='button'>My-Library</button>
-          </Link>
-          <GameCard games={games} isLibrary={true} />
-        </div>
-  
-        <div className="favorite-games">
-          <h3 className='header'>Favorite Games</h3>
-          <div className='game-list'>
+
+
+  return (
+    <>
+      <div className="nav">
+        <Navbar />
+      </div>
+
+      <div>
+        <h3 className='header'>GameShop</h3>
+        <Link to="/gameshop">
+        <button className='button'>Visit Shop</button>
+        </Link>
+        <GameCard games={recommendedGames} />
+      </div>
+
+      <div>
+      <h3 className='header'>My Games</h3>
+        <Link to="/mygames">
+        <button className='button'>My-Library</button>
+        </Link>
+        <GameCard games={games} isLibrary={true} />
+      </div>
+
+      <div>
+        <h3 className='header'>Favorite Games</h3>
           {favouriteGames.slice(0, 3).map((game) => (
             <GameCard key={game.id} games={[game]} />
           ))}

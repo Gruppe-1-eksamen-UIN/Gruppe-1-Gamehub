@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import GameCard from "./GameCard";
 
@@ -39,7 +38,7 @@ function GameShop({ games }) {
   };
 
   return (
-    <div className="spill">
+    <div>
       <div className="nav">
         <Navbar />
       </div>
