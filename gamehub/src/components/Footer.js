@@ -10,5 +10,6 @@ export default function Footer() {
         </p>
       </div>
     </footer>
+    //lagde en footer som innholder rawg sin attribute link
   );
 }

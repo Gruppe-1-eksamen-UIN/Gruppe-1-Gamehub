@@ -150,6 +150,11 @@ h1 {
   border-radius: 10px;
 }
 
+.rem-fav-button:hover {
+  cursor: pointer;
+  background-color: #4be0e6;
+}
+
 .gam {
   max-width: 800px;
   margin: 0 auto;

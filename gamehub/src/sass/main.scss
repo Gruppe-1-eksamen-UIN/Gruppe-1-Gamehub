@@ -168,13 +168,17 @@ h1 {
     
 }
 
+.rem-fav-button:hover{
+	cursor: pointer;
+	background-color: #4be0e6;
+}
+
 
 .gam {
 	max-width: 800px;
 	margin: 0 auto;
     margin-top: 30px;
 	padding: 20px;
-	// background-color: #5e1b8b;
 	background-image: linear-gradient(to right, #171957 0%, rgb(53, 29, 52) 100%);
 	border-radius: 8px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0);

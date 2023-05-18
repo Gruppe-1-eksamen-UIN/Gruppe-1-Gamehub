@@ -88,8 +88,12 @@ export default function Dashboard() {
         </Link>
         <GameCard games={games} isLibrary={true} />
       </div>
+
       <div>
         <h3 className='header'>Favorite Games - {favouriteGames.length}</h3>
+        <Link to="/favourites">
+          <button className='button'>My-favorites</button>
+        </Link>
         <div className="game-list">
           {favouriteGames.slice(0, 3).map((game) => (
             //setter en splice for å sett maks 3 games i dashboard/favorites.
