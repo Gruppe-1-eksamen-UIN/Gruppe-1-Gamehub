@@ -86,13 +86,8 @@ export default function MyGames() {
       <div className="nav">
         <Navbar />
       </div>
-      <GameCard games={myGames}>
-        {(game) => (
-          <button className="fav-button" onClick={() => addToFavourites(game)}>
-            Add to favourites
-          </button>
-        )}
-      </GameCard>
+     
+ 
       <SanityGames />
     </>
   );

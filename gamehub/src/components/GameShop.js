@@ -54,8 +54,8 @@ function GameShop({ games }) {
               ) : (
                 "Buy"
               )}
-            </button>
-          </GameCard>
+               </button>
+       </GameCard>
         ))}
       </div>
     </div>

@@ -1,12 +1,9 @@
 import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
 import Client from '../utils/sanity/Client';
-import Favourites from './Favourites';
 
 function SanityGames() {
   const [products, setProducts] = useState([]);
-  const [favourites, setFavourites] = useState([]);
-
   const builder = imageUrlBuilder(Client);
 
   function urlFor(source) {
@@ -34,15 +31,13 @@ function SanityGames() {
     fetchProducts();
   }, []);
 
-  const handleAddToFavourites = (product) => {
-    setFavourites((prevFavourites) => [...prevFavourites, product]);
-  };
+  const limitedProducts = products.slice(0, 4); // Limit the number of products to display
 
   return (
     <div>
       <h1>Products</h1>
       <ul>
-        {products.map((product) => (
+        {limitedProducts.map((product) => (
           <li key={product._id}>
             <img
               src={urlFor(product.image).width(200).height(200).fit('crop').url()}
@@ -52,11 +47,9 @@ function SanityGames() {
             <p>Game Played Time: {product.playedTime}</p>
             <p>Genre: {product.genre}</p>
             {console.log(product.image.asset.url)}
-            <button onClick={() => handleAddToFavourites(product)}>Add to Favourites</button>
           </li>
         ))}
       </ul>
-      <Favourites favourites={favourites} />
     </div>
   );
 }
