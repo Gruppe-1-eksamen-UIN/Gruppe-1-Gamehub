@@ -10,12 +10,12 @@ function SanityGames(){
     return builder.image(source)
   }
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const result = await Client.fetch('*[_type == "product"]{name, genre, image}');
+  useEffect(() => {const fetchProducts = async () => {
+    const result = await Client.fetch('*[_type == "product"]{name, genre, image}');
       setProducts(result);
     };
-    fetchProducts();
+
+  fetchProducts();
   }, []);
 
 
