@@ -11,6 +11,11 @@ export default function Navbar() {
       </div>
       <ul className="navbar-links">
         <li className="nav-item">
+        <Link className="nav-link" to="/">
+          Home
+        </Link>
+        </li>
+        <li className="nav-item">
           <Link className="nav-link" to="/mygames">
             My Games
           </Link>

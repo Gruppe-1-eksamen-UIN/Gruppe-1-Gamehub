@@ -13,7 +13,8 @@ body {
   border-bottom: 0.4em solid;
 }
 .navbar h1 {
-  font-size: 30px;
+  font-size: 35px;
+  margin-bottom: 20px;
 }
 .navbar a {
   font-size: 20px;
@@ -30,13 +31,14 @@ body {
   color: white;
   text-decoration: none;
 }
-.navbar-title :hover {
-  transform: scale(1, 1);
+
+.navbar h1:hover {
+  color: #ab42cb;
 }
 
 .navbar-links {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   list-style-type: none;
 }
 
@@ -55,6 +57,7 @@ body {
 .header {
   margin-left: 40px;
   text-transform: uppercase;
+  font-size: 25px;
 }
 
 .color {
@@ -118,9 +121,14 @@ h1 {
   margin-bottom: 10px;
   background-color: #b5cce3;
   color: #000000;
-  padding: 7px 15px;
+  padding: 8px 17px;
   border-radius: 10px;
   margin-left: 40px;
+}
+
+.button:hover {
+  background-color: #4be0e6;
+  cursor: pointer;
 }
 
 .fav-button {
@@ -132,7 +140,7 @@ h1 {
 
 .fav-button:hover {
   cursor: pointer;
-  background-color: #8fca9d;
+  background-color: #4be0e6;
 }
 
 .rem-fav-button {
@@ -222,7 +230,7 @@ h1 {
 }
 
 .buy-button:hover {
-  background-color: #8fca9d;
+  background-color: #4be0e6;
 }
 
 .grid {
