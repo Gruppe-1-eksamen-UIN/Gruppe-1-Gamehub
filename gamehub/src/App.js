@@ -11,8 +11,6 @@ import GamePage from './components/GamePage';
 import Footer from './components/Footer';
 
 function App() {
-  
-  
 
   return (
     <Router>
