@@ -113,12 +113,6 @@ h1 {
   margin-left: 40px;
 }
 
-.button:hover {
-  cursor: pointer;
-  background-color: #000000;
-  color: #fff;
-}
-
 .fav-button {
   background-color: #b5cce3;
   color: #000000;
