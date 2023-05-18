@@ -63,10 +63,8 @@ padding: 5px;
     
 }
 
-
-
 .header{
-    margin-left: 40px;
+    margin-left: 3rem;
     text-transform: uppercase;
 	font-size: 25px;
 }
@@ -142,7 +140,7 @@ h1 {
     color: $color_2;
     padding: 8px 17px;
     border-radius: 10px;
-    margin-left: 40px;
+    margin-left: 3rem;
     
 }
 .button:hover{
@@ -169,6 +167,8 @@ h1 {
     border-radius: 10px;
     
 }
+
+
 .gam {
 	max-width: 800px;
 	margin: 0 auto;
@@ -259,7 +259,8 @@ h1 {
 }
 
 .footer {
-	background-image: linear-gradient(to right, #171957 0%, rgb(53, 29, 52) 100%);
+  background-color: #1b2838;
+  // background-image: linear-gradient(to right, #434343 0%, #1b2838 100%);
   color: white;
   padding: 20px;
   text-align: center;
