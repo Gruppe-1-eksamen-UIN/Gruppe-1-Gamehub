@@ -1,10 +1,8 @@
 
-import {useState} from 'react';
 import GameShop from './components/GameShop';
 import './css/main.css'
 import Dashboard from './components/Dashboard';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import GameCard from './components/GameCard';
 import MyGames from './components/MyGames';
 import Favourites from './components/Favourites';
 import GamePage from './components/GamePage';
