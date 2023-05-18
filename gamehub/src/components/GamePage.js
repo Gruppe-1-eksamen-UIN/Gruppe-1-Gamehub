@@ -1,9 +1,7 @@
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
-
 
 export default function GamePage() {
   const { id } = useParams();
@@ -23,7 +21,6 @@ export default function GamePage() {
   if (!game) {
     return <div>Loading...</div>;
   }
-
   return (
     <>
       <div className="nav">
@@ -57,5 +54,3 @@ export default function GamePage() {
        </>
   );
 }
-
-

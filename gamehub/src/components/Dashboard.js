@@ -1,5 +1,9 @@
 
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   import React, { useState, useEffect } from 'react';
   import axios from 'axios';
   import Navbar from './Navbar';
@@ -35,6 +39,7 @@
         setFavouriteGames(JSON.parse(storedFavourites));
       }
     }, []);
+<<<<<<< Updated upstream
     const generateStoreURL = (storeName, gameName) => {
       let url = '';
   
@@ -63,6 +68,8 @@
   
   
 
+=======
+>>>>>>> Stashed changes
 
   return (
     <>
@@ -77,6 +84,7 @@
         </Link>
         
       </div>
+<<<<<<< Updated upstream
       
         <div className="game-list">
           {recommendedGames.map((game) => (
@@ -92,6 +100,8 @@
           ))}
         </div>
 
+=======
+>>>>>>> Stashed changes
       <div>
       <h3 className='header'>My Games</h3>
         <Link to="/mygames">
@@ -99,7 +109,6 @@
         </Link>
         <GameCard games={games} isLibrary={true} />
       </div>
-
       <div>
         <h3 className='header'>Favorite Games</h3>
         <div className='game-list'>
@@ -111,4 +120,3 @@
       </>
     );
   }
-  

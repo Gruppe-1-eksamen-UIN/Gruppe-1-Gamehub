@@ -1,4 +1,3 @@
-
 import GameShop from './components/GameShop';
 import './css/main.css'
 import Dashboard from './components/Dashboard';
@@ -9,9 +8,6 @@ import GamePage from './components/GamePage';
 import Footer from './components/Footer';
 
 function App() {
-  
-  
-
   return (
     <Router>
     <>

@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import GameCard from "./GameCard";
 
-
 export default function MyGames() {
   const [myGames, setMyGames] = useState([]);
   const [favourites, setFavourites] = useState([]);

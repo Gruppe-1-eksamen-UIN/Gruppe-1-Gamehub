@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function GameCard({games, children}) {
-
   return (
     <div >
       <ul className="game-list">
