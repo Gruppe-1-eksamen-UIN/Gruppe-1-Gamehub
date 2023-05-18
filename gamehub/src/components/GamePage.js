@@ -45,7 +45,7 @@ export default function GamePage() {
       <p>Description: {game.description_raw}</p>
         {/* <p>Utgivelsesår: {game.released.slice(0, 4)}</p> */}
         <p>Plattforms: {game.platforms.map((platform) => platform.platform.name).join(", ")}</p>
-        <p>
+        <p className="buy">
           Buy:{" "}
           {game.stores.map((store) => (
             <a key={store.id} href={`https://${store.store.domain}`} target="_blank" rel="noopener noreferrer">
