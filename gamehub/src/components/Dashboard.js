@@ -33,6 +33,7 @@ export default function Dashboard() {
     if (storedFavourites) {
       setFavouriteGames(JSON.parse(storedFavourites));
     }
+    
   }, []);
   //har brukt useeffect og axios.get for å hente ut api fra rawg 
   function generateStoreURL(storeName, gameName) {
@@ -91,6 +92,7 @@ export default function Dashboard() {
         <h3 className='header'>Favorite Games - {favouriteGames.length}</h3>
         <div className="game-list">
           {favouriteGames.slice(0, 3).map((game) => (
+            //setter en splice for å sett maks 3 games i dashboard/favorites.
             <GameCard key={game.id} games={[game]} />
           ))}
         </div>

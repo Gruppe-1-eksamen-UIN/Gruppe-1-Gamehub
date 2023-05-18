@@ -31,6 +31,8 @@ export default function MyGames() {
       localStorage.setItem("favourites", JSON.stringify(updatedFavourites));
     }
   };
+  //lagd en funksjon som lagrer et spill i "favorites" når man trykker på add to favorites.
+  //lagt til localstorage som passer på at lagret informasjon ikke blir borte mens du navigerer siden.
 
   const isAddedToFavourites = (game) => {
     return favourites.some((favourite) => favourite.id === game.id);
