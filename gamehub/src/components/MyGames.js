@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";  
+import GameCard from "./GameCard"; // Import the GameCard component
+import { Link } from "react-router-dom";
 
 export default function MyGames() {
   const [myGames, setMyGames] = useState([]);
@@ -30,9 +31,6 @@ export default function MyGames() {
     }
   };
   
-  
-  console.log(favourites)
-
   return (
     <div className="mygames">
       <div className="nav">
@@ -41,17 +39,14 @@ export default function MyGames() {
 
       <h3 className="header">My Games-Library</h3>
       <div className="game-list">
+        
+        {/* Map over myGames and render a GameCard for each game */}
         {myGames.map((game) => (
-          <div key={game.id} className="game">
-             <Link to={`/game/${game.id}`}>
-              <img src={game.background_image} alt={game.name} className="game-image" />
-              </Link>
-            <h2>{game.name}</h2>
-            <p>Rating: {game.rating}</p>
-            <p>Genres: {game.genres.map((genre) => genre.name).join("/")}</p>
+          <GameCard key={game.id} games={[game]}>
             <button className="fav-button" onClick={() => addToFavourites(game)}>Add to favourites</button>
-          </div>
+          </GameCard>
         ))}
+        
       </div>
     </div>
   );

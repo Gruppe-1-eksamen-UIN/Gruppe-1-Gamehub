@@ -68,11 +68,10 @@ padding: 5px;
 .game-list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-between; 
 	align-items: flex-start;
 	padding-left: 40px;
 	padding-right: 40px;
-
     @media(max-width: 1250px) {
         justify-content: center;
     }
@@ -124,12 +123,9 @@ h1 {
     background-color: $background-color_4;
     color: $color_2;
     padding: 7px 15px;
-    border-radius: 10px;  
-}
-.button:hover{
-	cursor: pointer;
-	background-color: #000000;
-	color: #fff;
+    border-radius: 10px;
+    margin-left: 40px;
+    
 }
 
 .fav-button{

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import GameCard from "./GameCard";
 
 export default function Favourites() {
   const [favourites, setFavourites] = 
@@ -23,16 +24,14 @@ export default function Favourites() {
       <div className="nav">
         <Navbar />
       </div>
-      <h3 className="header">My Favourites</h3>
-      <div className="game-list">
+
+      <h3 className="header">My Favourites</h3> 
+      <div className="game-list"> 
       {favourites.map((favourite) => (
-        <div key={favourite.id} className="game">
-          <img src={favourite.background_image} alt={favourite.name} />
-          <h3>{favourite.name}</h3>
-          <p>Rating: {favourite.rating}</p>
-            <p>Genres: {favourite.genres.map((genre) => genre.name).join('/')}</p>
-          <button className="rem-fav-button" onClick={() => handleRemoveFavourite(favourite.id)}>Remove from favourites</button>
-        </div>
+          <GameCard key={favourite.id} games={[favourite]}>
+            <button className="rem-fav-button" onClick={() => handleRemoveFavourite(favourite.id)}>Remove from favourites</button>
+          </GameCard> 
+          
       ))}
       </div>
     </div>
